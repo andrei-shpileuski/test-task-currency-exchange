@@ -23,6 +23,7 @@ import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { LanguagesISOEnum } from '@core/data-access/services/metadata/metadata.service';
 import { API_URL } from '@core/data-access/tokens/api.token';
 import { environment } from '@env/environment';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
   http: HttpClient,
@@ -39,6 +40,7 @@ export const appConfig: ApplicationConfig = {
       withComponentInputBinding(),
     ),
     provideAnimations(),
+    provideAnimationsAsync(), //todo
     provideHttpClient(withInterceptors([requestTrackerInterceptor])),
     provideTranslateService({
       defaultLanguage: LanguagesISOEnum.Russian,
