@@ -1,0 +1,67 @@
+@use "src/styles/mixins.scss" as *;
+@use "src/styles/colors.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
+@use "src/styles/sizes.scss" as *;
+
+:host {
+  .header {
+    @include flex(row, center, space-between, null, 12px);
+    width: 100dvw;
+    padding: $content-padding;
+    box-sizing: border-box;
+    background-color: $color-black-25;
+    backdrop-filter: blur(25px);
+    position: relative;
+    &__progress-bar {
+      @include absolute(0, 0, null, 0);
+      width: 100%;
+    }
+    &_author-name {
+      font-size: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 100%;
+    }
+    &__links {
+      @include flex(row, center, center, null, 12px);
+
+      &__link {
+        height: 32px;
+        width: 32px;
+
+        &_icon {
+          height: 32px;
+          width: 32px;
+          transition: all 0.15s linear;
+          &:hover {
+            scale: 1.1;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .header {
+      padding: $content-padding-mobile;
+      &_author-name {
+        font-size: 16px;
+      }
+      &__links {
+        gap: 8px;
+        &__link {
+          height: 24px;
+          width: 24px;
+          &_icon {
+            height: 24px;
+            width: 24px;
+            &:hover {
+              scale: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

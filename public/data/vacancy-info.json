@@ -1,0 +1,16 @@
+{
+  "title": {
+    "ru": "Фронтенд разработчик (angular)",
+    "en": "Frontend Angular developer"
+  },
+  "grade": {
+    "ru": "Миддл",
+    "en": "Middle"
+  },
+  "company": {
+    "name": {
+      "ru": "the Invaders",
+      "en": "the Invaders"
+    }
+  }
+}

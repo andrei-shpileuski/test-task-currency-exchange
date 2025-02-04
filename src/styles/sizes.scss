@@ -1,0 +1,17 @@
+$content-width: 980px;
+
+$header-height: 76px;
+$header-height-mobile: 64px;
+
+$content-padding: 20px;
+$content-padding-mobile: 16px;
+
+$min-content-height: calc(
+  100dvh - 2 * #{$header-height} - 2 * 2 * $content-padding
+);
+$min-content-height-mobile: calc(
+  100dvh - 2 * $header-height-mobile - 2 * 2 * $content-padding-mobile
+);
+
+$max-content-width: calc(100dvw - ($content-padding * 2));
+$max-content-width-mobile: calc(100dvw - ($content-padding-mobile * 2));

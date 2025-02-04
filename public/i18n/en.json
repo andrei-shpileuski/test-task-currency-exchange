@@ -1,0 +1,16 @@
+{
+  "INTRO": {
+    "TITLE": "Test assignment in the company «{{ companyName }}» for the position of «{{ vacancyTitle }}»",
+    "REPOSITORY_LINK": "Link to the repository",
+    "BUTTONS": {
+      "DESCRIPTION": "See test task Description",
+      "SOLUTION": "Go to the Solution"
+    }
+  },
+  "TEST_TASK_DESCRIPTION": {
+    "TITLE": "Test Task «{{ testTaskTitle }}» Description"
+  },
+  "SOLUTION": {
+    "TITLE": "Test Task «{{ testTaskTitle }}» Solution"
+  }
+}

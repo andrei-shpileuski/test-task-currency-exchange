@@ -1,0 +1,80 @@
+@use "src/styles/colors.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
+@use "src/styles/sizes.scss" as *;
+
+:host {
+  .button {
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.15s ease-in-out;
+    border: none;
+    min-width: max-content;
+    padding: 0;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.16);
+    &:hover {
+      box-shadow: 8px 12px 16px 0 rgba(0, 0, 0, 0.16);
+    }
+    &:focus {
+      box-shadow: 8px 12px 16px 0 rgba(0, 0, 0, 0.16);
+      outline: 0;
+    }
+    &:active {
+      border-color: transparent;
+      box-shadow: none;
+    }
+    &:disabled {
+      border-color: transparent;
+      background-color: gray;
+      box-shadow: none;
+      color: $color-black-90;
+      cursor: default !important;
+    }
+    &_link {
+      display: inline-block;
+      width: auto;
+      height: auto;
+      padding: 12px 24px !important;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    &-default {
+      background-color: $color-whitesmoke;
+      * {
+        color: $color-black-90;
+      }
+      &:hover {
+        background-color: $color-whitesmoke;
+      }
+      &:focus {
+        background-color: $color-whitesmoke;
+      }
+      &:active {
+        background-color: $color-whitesmoke;
+      }
+    }
+
+    &-primary {
+      background-color: $color-red-primary;
+      color: $color-white-default;
+      &:hover {
+        background-color: $color-red-secondary;
+      }
+      &:focus {
+        background-color: $color-red-secondary;
+      }
+      &:active {
+        background-color: $color-red-primary;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .button {
+      &_link {
+        padding: 8px 16px !important;
+        font-size: 16px;
+      }
+    }
+  }
+}

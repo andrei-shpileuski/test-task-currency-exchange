@@ -1,0 +1,26 @@
+@use "src/styles/sizes.scss" as *;
+@use "src/styles/mixins.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
+
+:host {
+  @include flex(column, center, flex-start);
+  width: 100dvw;
+  .header-container {
+    position: fixed;
+  }
+  .content-container {
+    width: $content-width;
+    max-width: $max-content-width;
+    min-height: $min-content-height;
+    padding: calc($header-height + $content-padding * 2) 0;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .content-container {
+      width: $max-content-width-mobile;
+      max-width: $max-content-width-mobile;
+      min-height: $min-content-height-mobile;
+      padding: calc($header-height-mobile + $content-padding-mobile * 2) 0;
+    }
+  }
+}

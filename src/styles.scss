@@ -1,1 +1,60 @@
-/* You can add global styles to this file, and also import other style files */
+@use "src/styles/font-faces.scss" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: rgb(75, 0, 0);
+  background: linear-gradient(
+      145deg,
+      rgba(75, 0, 0, 1) 0%,
+      rgba(52, 13, 13, 1) 10%,
+      rgba(40, 36, 36, 1) 30%
+  );
+  background-color: rgba(40, 36, 36, 1);
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  height: 100dvh;
+  min-width: 100dvw;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", serif;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:active {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+a,
+button {
+  :hover {
+    cursor: pointer;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

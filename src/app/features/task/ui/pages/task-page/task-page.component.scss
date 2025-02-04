@@ -1,0 +1,33 @@
+@use "src/styles/mixins.scss" as *;
+@use "src/styles/sizes.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
+
+:host {
+  .test-task-description {
+    @include flex(column, flex-start, flex-start, null, 40px);
+    max-width: $max-content-width;
+    &__top {
+      @include flex(row, center, flex-start, null, $content-padding);
+    }
+    &__text {
+      font-size: 18px;
+      max-width: 100%;
+      word-break: break-word;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .test-task-description {
+      max-width: $max-content-width-mobile;
+      &__top {
+        gap: $content-padding-mobile;
+        &_title {
+          font-size: 20px;
+        }
+      }
+      &__text {
+        font-size: 14px;
+      }
+    }
+  }
+}

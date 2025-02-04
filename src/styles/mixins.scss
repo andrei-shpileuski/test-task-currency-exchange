@@ -1,0 +1,47 @@
+@mixin flex(
+  $direction,
+  $align-items,
+  $justify-content,
+  $flex-grow-shrink: null,
+  $gap: null
+) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+
+  @if $flex-grow-shrink != null {
+    flex: $flex-grow-shrink;
+  }
+
+  @if $gap != null {
+    gap: $gap;
+  }
+}
+
+@mixin grid($columns, $rows: auto, $gap: 0) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+}
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+
+  @if $top != null {
+    top: $top;
+  }
+
+  @if $right != null {
+    right: $right;
+  }
+
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+
+  @if $left != null {
+    left: $left;
+  }
+}

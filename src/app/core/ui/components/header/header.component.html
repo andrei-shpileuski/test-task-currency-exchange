@@ -1,0 +1,32 @@
+<div class="header">
+  <app-progress-bar
+    class="header__progress-bar"
+    [loading]="loading()"
+  ></app-progress-bar>
+
+  @if (authorInfo()?.name) {
+    <h2 class="header_author-name">
+      {{ authorInfo()?.name }}
+    </h2>
+  }
+
+  @if (authorInfo()?.links?.length) {
+    <div class="header__links">
+      @for (link of authorInfo()!.links; track $index) {
+        <a
+          class="header__links__link"
+          [target]="link.target"
+          [href]="link.type === 'link' ? link.href : 'mailto:' + link.href"
+        >
+          <img
+            class="header__links__link_icon"
+            [ngSrc]="'/icons/socials/' + link.icon + '.svg'"
+            [alt]="link.name"
+            [width]="'32'"
+            [height]="'32'"
+          />
+        </a>
+      }
+    </div>
+  }
+</div>

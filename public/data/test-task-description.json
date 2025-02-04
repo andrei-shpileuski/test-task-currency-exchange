@@ -1,0 +1,25 @@
+{
+  "title": {
+    "ru": "Обмен валют",
+    "en": "Currency exchange"
+  },
+  "text": {
+    "ru": [
+      "Нам нужно простое веб-приложение на angular 17+ для конвертации валют. ",
+      "Следующие валюты должны поддерживаться: Руб, Доллар США, Евро, Фунт стерлингов. ",
+      "Пользователь должен иметь возможность конвертировать суммы между каждой из этих валют. Конвертация должна происходить не по нажатию на кнопку, а в реальном времени, как например это реализовано здесь (https://www.yandex.ru/search/?text=конвертер+валют&lr=971&search_source=chromentp_desktop).",
+      "Пример использования №1. Пользователь выбирает валюты, из которых должна быть произведена конвертация. Пользователь вводит сумму, подлежащую конвертации. При необходимости выходные вводимые данные валидируются. Отобразится результат преобразования.",
+      "Пример использования №2. Пользователь переключает валюты. Приложение преобразует данные в другом направлении и отображает результат.",
+      "Данные о текущем курсе валют можно получить, например, с https://currencyfreaks.com или любого другого подобного сервиса."
+    ],
+    "en": [
+      "We need a simple web application built with Angular 17+ for currency conversion.",
+      "The following currencies should be supported: RUB, USD, EUR, GBP.",
+      "The user should be able to convert amounts between each of these currencies. The conversion should occur in real-time, not by pressing a button, similar to how it is implemented here.",
+      "Usage example #1: The user selects the currencies for conversion. The user enters the amount to be converted. If necessary, the input data is validated. The conversion result is displayed.",
+      "Usage example #2: The user switches the currencies. The application converts the data in the opposite direction and displays the result.",
+      "Currency exchange rate data can be obtained, for example, from https://currencyfreaks.com or any similar service."
+    ]
+  },
+  "repositoryLink": "https://github.com/andrei-shpileuski/test-task-starter"
+}

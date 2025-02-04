@@ -1,0 +1,16 @@
+{
+  "INTRO": {
+    "TITLE": "Тестовое задание для компании «{{ companyName }}» на позицию «{{ vacancyTitle }}»",
+    "REPOSITORY_LINK": "Ссылка на репозиторий",
+    "BUTTONS": {
+      "DESCRIPTION": "Посмотреть описание задачи",
+      "SOLUTION": "Перейти к решению"
+    }
+  },
+  "TEST_TASK_DESCRIPTION": {
+    "TITLE": "Описание техзадания «{{ testTaskTitle }}»"
+  },
+  "SOLUTION": {
+    "TITLE": "Решение техзадания «{{ testTaskTitle }}»"
+  }
+}
