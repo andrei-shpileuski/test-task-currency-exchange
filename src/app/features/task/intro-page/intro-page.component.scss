@@ -1,0 +1,48 @@
+@use "../../../../styles/mixins" as *;
+@use "../../../../styles/colors" as *;
+@use "../../../../styles/sizes" as *;
+@use "../../../../styles/breakpoints" as *;
+
+:host {
+  .intro-page {
+    @include flex(column, flex-start, center, null, 100px);
+    min-height: $min-content-height;
+    &__test-task {
+      @include flex(column, flex-start, flex-start, null, $content-padding);
+      &_name {
+        color: $color-whitesmoke;
+        font-size: 50px;
+      }
+      &_title {
+        width: calc($content-width * 0.7);
+        max-width: $max-content-width;
+      }
+      &_repository {
+        text-decoration: underline;
+        color: $color-red-grey;
+      }
+    }
+
+    &__buttons {
+      @include flex(row, flex-start, flex-start, null, 12px);
+      flex-wrap: wrap;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .intro-page {
+      min-height: $min-content-height-mobile;
+      gap: 40px;
+      &__test-task {
+        gap: $content-padding-mobile;
+        &_name {
+          font-size: 32px;
+        }
+        &_title {
+          max-width: $max-content-width-mobile;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

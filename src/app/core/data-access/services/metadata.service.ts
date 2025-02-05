@@ -1,47 +1,21 @@
 import { inject, Injectable } from '@angular/core';
-import { filter, take } from 'rxjs';
 import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
-import { MetadataApiService } from '@core/data-access/services/api/metadata-api.service';
 import { IMetadata } from '@core/entities/interfaces/metadata.interface';
-import { MetadataStateService } from '@core/data-access/services/state/metadata-state.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MetadataService {
-  private readonly _metadataApiService = inject(MetadataApiService);
-  private readonly _metadataStateService = inject(MetadataStateService);
   private readonly _meta = inject(Meta);
   private readonly _title = inject(Title);
   private readonly _document = inject(DOCUMENT);
 
-  public constructor() {
-    this.defineMetadata();
-  }
-
-  public defineMetadata(): void {
-    this._metadataApiService
-      .getAuthorInfo()
-      .pipe(take(1))
-      .subscribe((metadata) => {
-        this._metadataStateService.setValue(metadata);
-        this.applyMetadata();
-      });
-  }
-
-  public applyMetadata(): void {
-    this._metadataStateService.value$
-      .pipe(
-        filter((metadata) => !!metadata),
-        take(1),
-      )
-      .subscribe((metadata) => {
-        this.setLang(metadata);
-        this.applyTitleTag(metadata);
-        this.applyBasicTags(metadata);
-        this.applyOGTags(metadata);
-      });
+  public applyMetadata(metadata: IMetadata): void {
+    this.setLang(metadata);
+    this.applyTitleTag(metadata);
+    this.applyBasicTags(metadata);
+    this.applyOGTags(metadata);
   }
 
   private applyTitleTag(metadata: IMetadata): void {

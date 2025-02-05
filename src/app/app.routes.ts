@@ -5,13 +5,13 @@ export const routes: Routes = [
     path: '',
     loadComponent: () =>
       import(
-        '@app/features/task/ui/pages/intro-page/intro-page.component'
+        '@app/features/task/intro-page/intro-page.component'
         ).then((mod) => mod.IntroPageComponent),
   },
   {
     path: 'task',
     loadComponent: () =>
-      import('@app/features/task/ui/pages/task-page/task-page.component').then(
+      import('@app/features/task/task-page/task-page.component').then(
         (mod) => mod.TaskPageComponent,
       ),
   },

@@ -4,9 +4,9 @@ import {
   inject,
   Signal,
 } from '@angular/core';
-import { IAuthorInfo } from '@app/features/task/entities/interfaces/author-info.interface';
-import { AuthorInfoStateService } from '@app/features/task/data-access/services/state/author-info-state.service';
 import { NgOptimizedImage } from '@angular/common';
+import { authorInfoStore } from '@core/data-access/state/environment/author-info.store';
+import { IAuthorInfo } from '@core/entities/interfaces/author-info.interface';
 
 @Component({
   selector: 'app-header',
@@ -16,8 +16,5 @@ import { NgOptimizedImage } from '@angular/common';
   imports: [NgOptimizedImage],
 })
 export class HeaderComponent {
-  private readonly _authorInfoStateService = inject(AuthorInfoStateService);
-
-  public authorInfo: Signal<IAuthorInfo | null> =
-    this._authorInfoStateService.value;
+  public authorInfo: Signal<IAuthorInfo | null> = inject(authorInfoStore).data;
 }
