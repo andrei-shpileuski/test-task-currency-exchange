@@ -5,8 +5,8 @@ import {
   Signal,
 } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { authorInfoStore } from '@core/data-access/state/environment/author-info.store';
 import { IAuthorInfo } from '@core/entities/interfaces/author-info.interface';
+import { projectInfoStore } from '@core/data-access/state/project-info.store';
 
 @Component({
   selector: 'app-header',
@@ -16,5 +16,6 @@ import { IAuthorInfo } from '@core/entities/interfaces/author-info.interface';
   imports: [NgOptimizedImage],
 })
 export class HeaderComponent {
-  public authorInfo: Signal<IAuthorInfo | null> = inject(authorInfoStore).data;
+  public authorInfo: Signal<IAuthorInfo | null> =
+    inject(projectInfoStore).author;
 }

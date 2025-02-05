@@ -7,17 +7,9 @@ import {
 } from '@ngrx/signals';
 import { computed } from '@angular/core';
 
-interface State {
-  count: number;
-}
-
-const initialState: State = {
-  count: 0,
-};
-
 export const requestCountStore = signalStore(
   { providedIn: 'root' },
-  withState(initialState),
+  withState<{ count: number }>({ count: 0 }),
   withComputed(({ count }) => ({
     loading: computed(() => count() > 0),
   })),

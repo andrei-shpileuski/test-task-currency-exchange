@@ -1,5 +1,11 @@
-import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
-import { inject } from '@angular/core';
+import {
+  patchState,
+  signalStore,
+  withComputed,
+  withMethods,
+  withState,
+} from '@ngrx/signals';
+import { computed, inject } from '@angular/core';
 import { FontsService } from '@core/data-access/services/fonts.service';
 import { TranslateService } from '@ngx-translate/core';
 import { filter, interval, map, take } from 'rxjs';
@@ -16,7 +22,10 @@ const initialState: State = {
 
 export const contentReadyStore = signalStore(
   { providedIn: 'root' },
-  withState(initialState),
+  withState<State>(initialState),
+  withComputed((state) => ({
+    ready: computed(() => state.translationsLoaded() && state.fontsLoaded()),
+  })),
   withMethods(
     (
       store,

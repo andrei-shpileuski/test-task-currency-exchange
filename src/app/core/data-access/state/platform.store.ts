@@ -8,17 +8,9 @@ import {
 import { computed, inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
-interface State {
-  platform: 'server' | 'browser' | null;
-}
-
-const initialState: State = {
-  platform: null,
-};
-
 export const platformStore = signalStore(
   { providedIn: 'root' },
-  withState(initialState),
+  withState<{ platform: 'server' | 'browser' | null }>({ platform: null }),
   withComputed(({ platform }) => ({
     isBrowser: computed(() => platform() === 'browser'),
     isServer: computed(() => platform() === 'server'),

@@ -8,8 +8,7 @@ import { ButtonComponent } from '@app/ui-kit/button/button.component';
 import { TranslatePipe } from '@ngx-translate/core';
 import { IVacancyInfo } from '@core/entities/interfaces/vacancy-info.interface';
 import { ITestTaskDescription } from '@core/entities/interfaces/test-task-description.interface';
-import { testTaskDescriptionStore } from '@core/data-access/state/environment/test-task-description.store';
-import { vacancyInfoStore } from '@core/data-access/state/environment/vacancy-info.store';
+import { projectInfoStore } from '@core/data-access/state/project-info.store';
 
 @Component({
   selector: 'app-task-page',
@@ -19,9 +18,8 @@ import { vacancyInfoStore } from '@core/data-access/state/environment/vacancy-in
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IntroPageComponent {
-  public testTaskDescription: Signal<ITestTaskDescription | null> = inject(
-    testTaskDescriptionStore,
-  ).data;
+  public testTaskDescription: Signal<ITestTaskDescription | null> =
+    inject(projectInfoStore).testTask;
   public vacancyInfo: Signal<IVacancyInfo | null> =
-    inject(vacancyInfoStore).data;
+    inject(projectInfoStore).vacancy;
 }

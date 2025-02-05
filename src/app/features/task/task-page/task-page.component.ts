@@ -8,7 +8,7 @@ import { BackButtonComponent } from '@app/ui-kit/back-button/back-button.compone
 import { ButtonComponent } from '@app/ui-kit/button/button.component';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ITestTaskDescription } from '@core/entities/interfaces/test-task-description.interface';
-import { testTaskDescriptionStore } from '@core/data-access/state/environment/test-task-description.store';
+import { projectInfoStore } from '@core/data-access/state/project-info.store';
 
 @Component({
   selector: 'app-task-page',
@@ -18,7 +18,6 @@ import { testTaskDescriptionStore } from '@core/data-access/state/environment/te
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TaskPageComponent {
-  public testTaskDescription: Signal<ITestTaskDescription | null> = inject(
-    testTaskDescriptionStore,
-  ).data;
+  public testTaskDescription: Signal<ITestTaskDescription | null> =
+    inject(projectInfoStore).testTask;
 }

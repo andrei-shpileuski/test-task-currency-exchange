@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { filter, from, map, Observable, switchMap, take } from 'rxjs';
-import { platformStore } from '@core/data-access/state/core/platform.store';
+import { platformStore } from '@core/data-access/state/platform.store';
 import { toObservable } from '@angular/core/rxjs-interop';
 
 @Injectable({

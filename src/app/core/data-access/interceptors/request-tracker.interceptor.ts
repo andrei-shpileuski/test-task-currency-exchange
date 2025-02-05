@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { tap, catchError, Observable, throwError, finalize } from 'rxjs';
-import { requestCountStore } from '@core/data-access/state/core/request-count.store';
+import { requestCountStore } from '@core/data-access/state/request-count.store';
 
 export const requestTrackerInterceptor: HttpInterceptorFn = (
   req: HttpRequest<any>,

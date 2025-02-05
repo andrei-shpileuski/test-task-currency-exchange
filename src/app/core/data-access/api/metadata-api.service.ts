@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { InternalApiService } from '@core/data-access/api/core/internal-api.service';
+import { InternalApiService } from '@core/data-access/api/@internal-api.service';
 import { combineLatest, filter, map, Observable } from 'rxjs';
 import {
   IMetadata,
@@ -7,11 +7,9 @@ import {
   IMetadataReplaceData,
 } from '@core/entities/interfaces/metadata.interface';
 import { CLIENT_URL } from '@core/data-access/tokens/client-url.token';
-import { currentLanguageStore } from '@core/data-access/state/core/current-language.store';
+import { currentLanguageStore } from '@core/data-access/state/current-language.store';
 import { toObservable } from '@angular/core/rxjs-interop';
-import { authorInfoStore } from '@core/data-access/state/environment/author-info.store';
-import { testTaskDescriptionStore } from '@core/data-access/state/environment/test-task-description.store';
-import { vacancyInfoStore } from '@core/data-access/state/environment/vacancy-info.store';
+import { projectInfoStore } from '@core/data-access/state/project-info.store';
 
 @Injectable({
   providedIn: 'root',
@@ -20,10 +18,12 @@ export class MetadataApiService {
   private readonly _clientUrl = inject(CLIENT_URL);
   private readonly _internalApi = inject(InternalApiService);
   private readonly _lang$ = toObservable(inject(currentLanguageStore).data);
-  private readonly _authorInfo$ = toObservable(inject(authorInfoStore).data);
-  private readonly _vacancyInfo$ = toObservable(inject(vacancyInfoStore).data);
+  private readonly _authorInfo$ = toObservable(inject(projectInfoStore).author);
+  private readonly _vacancyInfo$ = toObservable(
+    inject(projectInfoStore).vacancy,
+  );
   private readonly _testTaskDescription$ = toObservable(
-    inject(testTaskDescriptionStore).data,
+    inject(projectInfoStore).testTask,
   );
 
   public getMetadata(): Observable<IMetadata> {

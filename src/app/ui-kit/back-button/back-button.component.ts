@@ -3,7 +3,7 @@ import { Component, inject, input } from '@angular/core';
 import { Router } from '@angular/router';
 import { filter, from, take } from 'rxjs';
 import { toObservable } from '@angular/core/rxjs-interop';
-import { platformStore } from '@core/data-access/state/core/platform.store';
+import { platformStore } from '@core/data-access/state/platform.store';
 
 @Component({
   selector: 'app-back-button',
