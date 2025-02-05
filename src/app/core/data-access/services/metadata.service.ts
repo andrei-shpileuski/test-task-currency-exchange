@@ -24,7 +24,10 @@ export class MetadataService {
     this._metadataApiService
       .getAuthorInfo()
       .pipe(take(1))
-      .subscribe((metadata) => this._metadataStateService.setValue(metadata));
+      .subscribe((metadata) => {
+        this._metadataStateService.setValue(metadata);
+        this.applyMetadata();
+      });
   }
 
   public applyMetadata(): void {

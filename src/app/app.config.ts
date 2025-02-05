@@ -44,7 +44,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(), //todo
     provideHttpClient(withInterceptors([requestTrackerInterceptor])),
     provideTranslateService({
-      defaultLanguage: LanguagesISOEnum.English,
+      defaultLanguage: LanguagesISOEnum.Russian,
       loader: {
         provide: TranslateLoader,
         useFactory: httpLoaderFactory,

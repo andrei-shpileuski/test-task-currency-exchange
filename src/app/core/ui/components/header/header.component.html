@@ -1,9 +1,4 @@
 <div class="header">
-  <app-progress-bar
-    class="header__progress-bar"
-    [loading]="loading()"
-  ></app-progress-bar>
-
   @if (authorInfo()?.name) {
     <h2 class="header_author-name">
       {{ authorInfo()?.name }}

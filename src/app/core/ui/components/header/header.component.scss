@@ -12,10 +12,7 @@
     background-color: $color-black-25;
     backdrop-filter: blur(25px);
     position: relative;
-    &__progress-bar {
-      @include absolute(0, 0, null, 0);
-      width: 100%;
-    }
+
     &_author-name {
       font-size: 20px;
       white-space: nowrap;
@@ -23,13 +20,12 @@
       text-overflow: ellipsis;
       max-width: 100%;
     }
+
     &__links {
       @include flex(row, center, center, null, 12px);
-
       &__link {
         height: 32px;
         width: 32px;
-
         &_icon {
           height: 32px;
           width: 32px;

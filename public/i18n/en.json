@@ -1,4 +1,5 @@
 {
+  "TRANSLATION_READY": "true",
   "INTRO": {
     "TITLE": "Test assignment in the company «{{ companyName }}» for the position of «{{ vacancyTitle }}»",
     "REPOSITORY_LINK": "Link to the repository",

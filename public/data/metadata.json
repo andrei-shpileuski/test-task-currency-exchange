@@ -5,8 +5,8 @@
     "en": "en-US"
   },
   "title": {
-    "ru": "{{authorName}} - Тестовое задание «{{testTaskName}}» для вакансии «{{vacancyTitle}}»",
-    "en": "{{authorName}} - Test task «{{testTaskName}}» for vacancy «{{vacancyTitle}}»"
+    "ru": "{{authorName}} - Тестовое задание",
+    "en": "{{authorName}} - Test task"
   },
   "description": {
     "ru": "Тестовое задание «{{testTaskName}}» от компании «{{companyName}}» для вакансии «{{vacancyTitle}}».",

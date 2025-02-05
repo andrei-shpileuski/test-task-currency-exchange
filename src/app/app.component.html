@@ -1,6 +1,13 @@
-<div class="header-container">
-  <app-header />
-</div>
-<div class="content-container">
-  <router-outlet />
-</div>
+<app-progress-bar
+  class="progress-bar-container"
+  [loading]="loading() || !contentReady()"
+></app-progress-bar>
+
+@if (contentReady()) {
+  <div class="header-container">
+    <app-header />
+  </div>
+  <div class="content-container">
+    <router-outlet />
+  </div>
+}

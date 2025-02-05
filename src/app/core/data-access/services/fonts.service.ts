@@ -10,7 +10,7 @@ export class FontsService {
   private readonly _fontsLoadedState = inject(FontsLoadedStateService);
   private readonly _platformStateService = inject(PlatformStateService);
 
-  public constructor() {
+  public defineFontsLoaded(): void {
     this._platformStateService.isBrowser$
       .pipe(
         filter(Boolean),
