@@ -17,11 +17,8 @@
       <br />
     }
   </div>
-  <app-button
-    class="intro-page__buttons_button"
-    [type]="'primary'"
-    [linkType]="'internal'"
-    [link]="'/solution'"
-    [text]="'INTRO.BUTTONS.SOLUTION'"
-  ></app-button>
+
+  <a mat-stroked-button [routerLink]="'/solution'">{{
+    "INTRO.BUTTONS.SOLUTION" | translate
+  }}</a>
 </div>

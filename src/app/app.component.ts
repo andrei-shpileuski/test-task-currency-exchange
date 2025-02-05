@@ -7,14 +7,14 @@ import {
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@core/ui/components/header/header.component';
-import { ProgressBarComponent } from '@app/ui-kit/progress-bar/progress-bar.component';
 import { CoreState } from '@core/data-access/state/@core.store';
+import { MatProgressBar } from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [RouterOutlet, HeaderComponent, ProgressBarComponent],
+  imports: [RouterOutlet, HeaderComponent, MatProgressBar],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {

@@ -28,19 +28,11 @@
   </div>
 
   <div class="intro-page__buttons">
-    <app-button
-      class="intro-page__buttons_button"
-      [type]="'default'"
-      [linkType]="'internal'"
-      [link]="'/task'"
-      [text]="'INTRO.BUTTONS.DESCRIPTION'"
-    ></app-button>
-    <app-button
-      class="intro-page__buttons_button"
-      [type]="'primary'"
-      [linkType]="'internal'"
-      [link]="'/solution'"
-      [text]="'INTRO.BUTTONS.SOLUTION'"
-    ></app-button>
+    <a mat-button [routerLink]="'/task'">{{
+      "INTRO.BUTTONS.DESCRIPTION" | translate
+    }}</a>
+    <a mat-stroked-button [routerLink]="'/solution'">{{
+      "INTRO.BUTTONS.SOLUTION" | translate
+    }}</a>
   </div>
 </div>
