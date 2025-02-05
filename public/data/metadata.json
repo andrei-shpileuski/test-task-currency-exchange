@@ -22,8 +22,8 @@
       "height": "630",
       "type": "image/jpeg",
       "url": {
-        "ru": "/metadata/images/ru.jpg",
-        "en": "/metadata/images/en.jpg"
+        "ru": "/metadata/images/og-image-ru.jpg",
+        "en": "/metadata/images/og-image-en.jpg"
       }
     }
   }

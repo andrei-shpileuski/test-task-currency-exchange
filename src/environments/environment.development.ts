@@ -9,5 +9,5 @@
 export const environment = {
   production: false,
   apiUrl: '', //todo. fill or remove
-  url: 'https://test-task-starter.onrender.com'
+  url: 'https://test-task-starter.onrender.com',
 };

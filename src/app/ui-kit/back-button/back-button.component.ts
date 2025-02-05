@@ -1,5 +1,5 @@
 import { Location, NgOptimizedImage } from '@angular/common';
-import { Component, computed, inject, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Router } from '@angular/router';
 import { filter, from, take } from 'rxjs';
 import { PlatformStateService } from '@core/data-access/services/state/platform-state.service';
@@ -14,7 +14,6 @@ import { PlatformStateService } from '@core/data-access/services/state/platform-
 export class BackButtonComponent {
   public link = input<string>();
   public hasPreviousPath = false;
-  public buttonVisible = computed(() => !!this.link() || this.hasPreviousPath);
 
   private readonly _location = inject(Location);
   private readonly _router = inject(Router);

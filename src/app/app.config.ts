@@ -36,12 +36,12 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideRouter(
       routes,
-      withPreloading(PreloadAllModules), //todo
+      withPreloading(PreloadAllModules),
       withViewTransitions(),
       withComponentInputBinding(),
     ),
     provideAnimations(),
-    provideAnimationsAsync(), //todo
+    provideAnimationsAsync(),
     provideHttpClient(withInterceptors([requestTrackerInterceptor])),
     provideTranslateService({
       defaultLanguage: LanguagesISOEnum.Russian,

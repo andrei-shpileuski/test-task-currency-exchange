@@ -11,11 +11,8 @@ import { HeaderComponent } from '@core/ui/components/header/header.component';
 import { AuthorInfoService } from '@app/features/task/data-access/services/business/author-info.service';
 import { VacancyInfoService } from '@app/features/task/data-access/services/business/vacancy-info.service';
 import { TestTaskDescriptionService } from '@app/features/task/data-access/services/business/test-task-description.service';
-import { TranslateService } from '@ngx-translate/core';
-import { LanguageStateService } from '@core/data-access/services/state/language-state.service';
 import { MetadataService } from '@core/data-access/services/metadata.service';
 import { PlatformService } from '@core/data-access/services/platform.service';
-import { LanguagesISOEnum } from '@core/entities/enums/languages-iso.enum';
 import { TranslationsService } from '@core/data-access/services/translations.service';
 import { TranslationsLoadedStateService } from '@core/data-access/services/state/translations-loaded-state.service';
 import { FontsLoadedStateService } from '@core/data-access/services/state/fonts-loaded-state.service';
@@ -44,7 +41,6 @@ export class AppComponent implements OnInit {
   private readonly _translationsLoadedStateService = inject(
     TranslationsLoadedStateService,
   );
-
   private readonly _fontsService = inject(FontsService);
   private readonly _fontsLoadedStateService = inject(FontsLoadedStateService);
   private readonly _requestTrackerStateService = inject(
