@@ -1,0 +1,30 @@
+{
+  "type": "website",
+  "locale": {
+    "ru": "ru-RU",
+    "en": "en-US"
+  },
+  "title": {
+    "ru": "{{authorName}} - Тестовое задание «{{testTaskName}}» для вакансии «{{vacancyTitle}}»",
+    "en": "{{authorName}} - Test task «{{testTaskName}}» for vacancy «{{vacancyTitle}}»"
+  },
+  "description": {
+    "ru": "Тестовое задание «{{testTaskName}}» от компании «{{companyName}}» для вакансии «{{vacancyTitle}}».",
+    "en": "Test task «{{testTaskName}}» from company «{{companyName}}» for the «{{vacancyTitle}}» position."
+  },
+  "keywords": {
+    "ru": "",
+    "en": ""
+  },
+  "og": {
+    "image": {
+      "width": "1200",
+      "height": "630",
+      "type": "image/jpeg",
+      "url": {
+        "ru": "/metadata/images/ru.jpg",
+        "en": "/metadata/images/en.jpg"
+      }
+    }
+  }
+}

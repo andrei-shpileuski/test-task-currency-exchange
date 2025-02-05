@@ -20,10 +20,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { requestTrackerInterceptor } from '@core/data-access/interceptors/request-tracker.interceptor';
 import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
-import { LanguagesISOEnum } from '@core/data-access/services/metadata/metadata.service';
-import { API_URL } from '@core/data-access/tokens/api.token';
+import { API_URL } from '@core/data-access/tokens/api-url.token';
 import { environment } from '@env/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { LanguagesISOEnum } from '@core/entities/enums/languages-iso.enum';
+import { CLIENT_URL } from '@core/data-access/tokens/client-url.token';
 
 const httpLoaderFactory: (http: HttpClient) => TranslateHttpLoader = (
   http: HttpClient,
@@ -43,7 +44,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimationsAsync(), //todo
     provideHttpClient(withInterceptors([requestTrackerInterceptor])),
     provideTranslateService({
-      defaultLanguage: LanguagesISOEnum.Russian,
+      defaultLanguage: LanguagesISOEnum.English,
       loader: {
         provide: TranslateLoader,
         useFactory: httpLoaderFactory,
@@ -51,5 +52,6 @@ export const appConfig: ApplicationConfig = {
       },
     }),
     { provide: API_URL, useValue: environment.apiUrl },
+    { provide: CLIENT_URL, useValue: environment.url },
   ],
 };

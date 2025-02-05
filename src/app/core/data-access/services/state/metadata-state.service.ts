@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BaseStateService } from '@core/data-access/services/state/base-state.service';
-import { LanguagesISOEnum } from '@core/entities/enums/languages-iso.enum';
+import { IMetadata } from '@core/entities/interfaces/metadata.interface';
 
 @Injectable({
   providedIn: 'root',
 })
-export class LanguageStateService extends BaseStateService<LanguagesISOEnum> {}
+export class MetadataStateService extends BaseStateService<IMetadata> {}

@@ -11,11 +11,9 @@ import { VacancyInfoService } from '@app/features/task/data-access/services/busi
 import { TestTaskDescriptionService } from '@app/features/task/data-access/services/business/test-task-description.service';
 import { TranslateService } from '@ngx-translate/core';
 import { LanguageStateService } from '@core/data-access/services/state/language-state.service';
-import {
-  LanguagesISOEnum,
-  MetadataService,
-} from '@core/data-access/services/metadata/metadata.service';
+import { MetadataService } from '@core/data-access/services/metadata.service';
 import { PlatformService } from '@core/data-access/services/platform.service';
+import { LanguagesISOEnum } from '@core/entities/enums/languages-iso.enum';
 
 @Component({
   selector: 'app-root',

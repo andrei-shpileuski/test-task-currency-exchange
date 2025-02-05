@@ -7,6 +7,7 @@
 // This is crucial to prevent sensitive information from being committed to the repository!
 
 export const environment = {
-  apiUrl: '', //todo. fill or remove
   production: true,
+  apiUrl: '', //todo. fill or remove
+  url: 'https://test-task-starter.onrender.com',
 };
