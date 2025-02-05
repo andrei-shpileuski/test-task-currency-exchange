@@ -13,19 +13,17 @@ import { VacancyInfoService } from '@app/features/task/data-access/services/busi
 import { TestTaskDescriptionService } from '@app/features/task/data-access/services/business/test-task-description.service';
 import { MetadataService } from '@core/data-access/services/metadata.service';
 import { PlatformService } from '@core/data-access/services/platform.service';
-import { TranslationsService } from '@core/data-access/services/translations.service';
-import { TranslationsLoadedStateService } from '@core/data-access/services/state/translations-loaded-state.service';
-import { FontsLoadedStateService } from '@core/data-access/services/state/fonts-loaded-state.service';
 import { ProgressBarComponent } from '@app/ui-kit/progress-bar/progress-bar.component';
 import { RequestTrackerStateService } from '@core/data-access/services/state/request-tracker-state.service';
-import { FontsService } from '@core/data-access/services/fonts.service';
 import { LanguageService } from '@core/data-access/services/language.service';
+import { ContentReadyStore } from '@core/data-access/services/state/example.store';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   imports: [RouterOutlet, HeaderComponent, ProgressBarComponent],
+  providers: [ContentReadyStore],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
@@ -37,23 +35,18 @@ export class AppComponent implements OnInit {
   private readonly _languageService = inject(LanguageService);
   private readonly _metadataService = inject(MetadataService);
   private readonly _platformService = inject(PlatformService);
-  private readonly _translationsService = inject(TranslationsService);
-  private readonly _translationsLoadedStateService = inject(
-    TranslationsLoadedStateService,
-  );
-  private readonly _fontsService = inject(FontsService);
-  private readonly _fontsLoadedStateService = inject(FontsLoadedStateService);
   private readonly _requestTrackerStateService = inject(
     RequestTrackerStateService,
   );
+  private readonly _contentReadyStore = inject(ContentReadyStore);
 
   public loading: Signal<boolean> =
     this._requestTrackerStateService.isInProgress;
 
   public contentReady = computed(
     () =>
-      !!this._fontsLoadedStateService.value() &&
-      !!this._translationsLoadedStateService.value(),
+      !!this._contentReadyStore.fontsLoaded() &&
+      !!this._contentReadyStore.translationsLoaded(),
   );
 
   public ngOnInit(): void {
@@ -62,10 +55,10 @@ export class AppComponent implements OnInit {
 
   private init(): void {
     this._languageService.defineCurrentLanguage();
-    this._translationsService.defineIsTranslationsLoaded();
     this._metadataService.defineMetadata();
     this._platformService.definePlatform();
-    this._fontsService.defineFontsLoaded();
+    this._contentReadyStore.setFontsLoaded();
+    this._contentReadyStore.setTranslationsLoaded();
     this.defineInitialData();
   }
 
