@@ -1,0 +1,18 @@
+@use "src/styles/mixins.scss" as *;
+@use "src/styles/sizes.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
+
+:host {
+  .page-header {
+    @include flex(row, center, flex-start, null, $content-padding);
+  }
+
+  @media screen and (max-width: $mobile) {
+    .page-header {
+      gap: $content-padding-mobile;
+      &_title {
+        font-size: 20px;
+      }
+    }
+  }
+}

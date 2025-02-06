@@ -1,0 +1,10 @@
+<div class="page-header">
+  @if (hasBackButton()) {
+    <app-back-button [link]="backButtonLink()" />
+  }
+  @if (title()) {
+    <h1 class="page-header_title">
+      {{ title() }}
+    </h1>
+  }
+</div>
