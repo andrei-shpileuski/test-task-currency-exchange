@@ -1,13 +1,13 @@
 <div class="header">
-  @if (authorInfo()?.name) {
+  @if (author()?.name) {
     <h2 class="header_author-name">
-      {{ authorInfo()?.name }}
+      {{ author()?.name }}
     </h2>
   }
 
-  @if (authorInfo()?.links?.length) {
+  @if (author()?.links?.length) {
     <div class="header__links">
-      @for (link of authorInfo()!.links; track $index) {
+      @for (link of author()!.links; track $index) {
         <a
           class="header__links__link"
           [target]="link.target"

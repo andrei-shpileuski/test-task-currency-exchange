@@ -1,12 +1,6 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  Signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { IAuthorInfo } from '@core/entities/interfaces/author-info.interface';
-import { projectInfoStore } from '@core/data-access/state/project-info.store';
+import { IAuthor } from '@app/environment/entities/interfaces/author.interface';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +10,5 @@ import { projectInfoStore } from '@core/data-access/state/project-info.store';
   imports: [NgOptimizedImage],
 })
 export class HeaderComponent {
-  public authorInfo: Signal<IAuthorInfo | null> =
-    inject(projectInfoStore).author;
+  public author = input.required<IAuthor | null>();
 }

@@ -1,0 +1,16 @@
+@use "src/styles/mixins.scss" as *;
+@use "src/styles/sizes.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
+
+:host {
+  .solution-page {
+    @include flex(column, flex-start, flex-start, null, 40px);
+    max-width: $max-content-width-mobile;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .solution-page {
+      max-width: $max-content-width-mobile;
+    }
+  }
+}

@@ -7,8 +7,13 @@ import {
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@core/ui/components/header/header.component';
-import { CoreState } from '@core/data-access/state/@core.store';
+import { CoreStateService } from '@core/data-access/state/core-state.service';
 import { MatProgressBar } from '@angular/material/progress-bar';
+import { IAuthor } from '@app/environment/entities/interfaces/author.interface';
+import { authorStore } from '@app/environment/data-access/state/author.store';
+import { metadataStore } from '@app/metadata/metadata.store';
+import { vacancyStore } from '@app/environment/data-access/state/vacancy.store';
+import { taskStore } from '@app/environment/data-access/state/task.store';
 
 @Component({
   selector: 'app-root',
@@ -18,16 +23,27 @@ import { MatProgressBar } from '@angular/material/progress-bar';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
-  private readonly _coreState = inject(CoreState);
+  private readonly _coreStateService = inject(CoreStateService);
+  private readonly _metadataStore = inject(metadataStore);
+  private readonly _authorStore = inject(authorStore);
+  private readonly _vacancyStore = inject(vacancyStore);
+  private readonly _taskStore = inject(taskStore);
 
-  public loading: Signal<boolean> = this._coreState.requestCount.loading;
-  public contentReady: Signal<boolean> = this._coreState.contentReady.ready;
+  public loading: Signal<boolean> = this._coreStateService.requestCount.loading;
+  public contentReady: Signal<boolean> =
+    this._coreStateService.contentReady.ready;
+
+  public author: Signal<IAuthor | null> = inject(authorStore).data;
 
   public ngOnInit(): void {
     this.init();
   }
 
   private init(): void {
-    this._coreState.init();
+    this._coreStateService.init();
+    this._metadataStore.init();
+    this._authorStore.defineData();
+    this._vacancyStore.defineData();
+    this._taskStore.defineData();
   }
 }

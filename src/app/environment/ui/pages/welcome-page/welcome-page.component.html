@@ -1,0 +1,38 @@
+<div class="welcome-page">
+  <div class="welcome-page__test-task">
+    @if (task()?.title) {
+      <h1 class="welcome-page__test-task_name">
+        «{{ task()?.title }}»
+      </h1>
+    }
+    @if (vacancy()?.company?.name) {
+      <h2 class="welcome-page__test-task_title">
+        {{
+          "INTRO.TITLE"
+            | translate
+              : {
+                  companyName: vacancy()?.company?.name,
+                  vacancyTitle: vacancy()?.title,
+                }
+        }}
+      </h2>
+    }
+    @if (task()?.repositoryLink) {
+      <a
+        class="welcome-page__test-task_repository"
+        [href]="task()!.repositoryLink"
+        [target]="'_blank'"
+        >{{ "INTRO.REPOSITORY_LINK" | translate }}</a
+      >
+    }
+  </div>
+
+  <div class="welcome-page__buttons">
+    <a mat-stroked-button [routerLink]="'/task'">{{
+      "INTRO.BUTTONS.DESCRIPTION" | translate
+    }}</a>
+    <a mat-flat-button [routerLink]="'/solution'">{{
+      "INTRO.BUTTONS.SOLUTION" | translate
+    }}</a>
+  </div>
+</div>

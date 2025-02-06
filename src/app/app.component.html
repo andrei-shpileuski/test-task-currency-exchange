@@ -1,13 +1,10 @@
 @if (loading() || !contentReady()) {
-  <mat-progress-bar
-    class="progress-bar-container"
-    mode="indeterminate"
-  ></mat-progress-bar>
+  <mat-progress-bar class="progress-bar-container" mode="indeterminate" />
 }
 
 @if (contentReady()) {
   <div class="header-container">
-    <app-header />
+    <app-header [author]="author()" />
   </div>
   <div class="content-container">
     <router-outlet />

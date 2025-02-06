@@ -1,0 +1,23 @@
+<div class="task-page">
+  <app-page-header
+    [title]="
+      'TEST_TASK_DESCRIPTION.TITLE'
+        | translate: { testTaskTitle: task()?.title }
+    "
+  />
+
+  <div class="task-page__content">
+    <div class="task-page__content__text">
+      @for (sentence of task()?.text; track $index) {
+        <p>{{ sentence }}</p>
+        <br />
+      }
+    </div>
+    <a
+      class="task-page__content_button"
+      mat-flat-button
+      [routerLink]="'/solution'"
+      >{{ "INTRO.BUTTONS.SOLUTION" | translate }}</a
+    >
+  </div>
+</div>

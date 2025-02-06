@@ -29,7 +29,6 @@ module.exports = tseslint.config(
           style: "kebab-case",
         },
       ],
-      // "@angular-eslint/prefer-standalone": ["warn|error"],
       "@typescript-eslint/no-unused-vars": ["warn"],
       "@typescript-eslint/explicit-module-boundary-types": ["warn"],
       "@typescript-eslint/no-explicit-any": ["warn"],
@@ -43,9 +42,6 @@ module.exports = tseslint.config(
       "@typescript-eslint/no-dupe-class-members": ["warn"],
       "@typescript-eslint/explicit-function-return-type": ["warn"],
       "no-eval": ["warn"],
-      // "@angular-eslint/prefer-on-push-component-change-detection": [
-      //   "warn|error",
-      // ],
     },
   },
   {
@@ -54,15 +50,6 @@ module.exports = tseslint.config(
       ...angular.configs.templateRecommended,
       ...angular.configs.templateAccessibility,
     ],
-    rules: {
-      // "@angular-eslint/template/prefer-self-closing-tags": ["warn|error"],
-      // "@angular-eslint/template/prefer-ngsrc": ["warn|error"],
-      // "@angular-eslint/template/prefer-control-flow": ["warn|error"],
-    },
+    rules: {},
   },
-  // {
-  //   files: ["**/*.scss"],
-  //   extends: ["stylelint-config-standard", "stylelint-config-recommended-scss"],
-  //   rules: {},
-  // },
 );
