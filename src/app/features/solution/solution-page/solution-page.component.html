@@ -1,9 +1,8 @@
 <div class="test-task-solution-page">
   <div class="test-task-solution-page__top">
-    <app-back-button
-      [link]="'/'"
-      class="test-task-solution-page__top_back-button"
-    ></app-back-button>
+    <button (click)="back()" class="test-task-description__top_back-button" mat-icon-button>
+      <mat-icon>chevron_left</mat-icon>
+    </button>
     <h1 class="test-task-solution-page__top_title">
       {{
         "SOLUTION.TITLE"

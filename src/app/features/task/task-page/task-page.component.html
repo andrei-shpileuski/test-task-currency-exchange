@@ -1,9 +1,12 @@
 <div class="test-task-description">
   <div class="test-task-description__top">
-    <app-back-button
-      [link]="'/'"
+    <button
+      (click)="back()"
       class="test-task-description__top_back-button"
-    ></app-back-button>
+      mat-icon-button
+    >
+      <mat-icon>chevron_left</mat-icon>
+    </button>
     <h1 class="test-task-description__top_title">
       {{
         "TEST_TASK_DESCRIPTION.TITLE"
@@ -11,14 +14,18 @@
       }}
     </h1>
   </div>
-  <div class="test-task-description__text">
-    @for (sentence of testTaskDescription()?.text; track $index) {
-      <p>{{ sentence }}</p>
-      <br />
-    }
+  <div class="test-task-description__content">
+    <div class="test-task-description__content__text">
+      @for (sentence of testTaskDescription()?.text; track $index) {
+        <p>{{ sentence }}</p>
+        <br />
+      }
+    </div>
+    <a
+      class="test-task-description__content_button"
+      mat-flat-button
+      [routerLink]="'/solution'"
+      >{{ "INTRO.BUTTONS.SOLUTION" | translate }}</a
+    >
   </div>
-
-  <a mat-stroked-button [routerLink]="'/solution'">{{
-    "INTRO.BUTTONS.SOLUTION" | translate
-  }}</a>
 </div>
