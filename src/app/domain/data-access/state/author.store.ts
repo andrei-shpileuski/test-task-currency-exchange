@@ -1,8 +1,8 @@
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { inject } from '@angular/core';
 import { take } from 'rxjs';
-import { IAuthor } from '@app/domain/entities/interfaces/author.interface';
-import { AuthorApiService } from '@app/domain/data-access/api/author-api.service';
+import { IAuthor } from '@domain/entities/interfaces/author.interface';
+import { AuthorApiService } from '@domain/data-access/api/author-api.service';
 
 export const authorStore = signalStore(
   { providedIn: 'root' },

@@ -3,7 +3,7 @@ import { combineLatest, filter, map, Observable } from 'rxjs';
 import {
   IVacancy,
   IVacancyResponse,
-} from '@app/domain/entities/interfaces/vacancy.interface';
+} from '@domain/entities/interfaces/vacancy.interface';
 import { InternalApiService } from '@core/data-access/api/internal-api.service';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { currentLanguageStore } from '@core/data-access/state/current-language.store';

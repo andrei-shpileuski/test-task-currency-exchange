@@ -1,9 +1,9 @@
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { inject } from '@angular/core';
 import { take } from 'rxjs';
-import { IMetadata } from '@app/domain/entities/interfaces/metadata.interface';
-import { MetadataApiService } from '../api/metadata-api.service';
-import { MetadataManagerService } from '../managers/metadata-manager.service';
+import { IMetadata } from '@domain/entities/interfaces/metadata.interface';
+import { MetadataApiService } from '@domain/data-access/api/metadata-api.service';
+import { MetadataManagerService } from '@domain/data-access/managers/metadata-manager.service';
 
 export const metadataStore = signalStore(
   { providedIn: 'root' },

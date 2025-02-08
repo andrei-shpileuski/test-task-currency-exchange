@@ -1,12 +1,9 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import {
-  PreloadAllModules,
   provideRouter,
   withComponentInputBinding,
-  withPreloading,
   withViewTransitions,
 } from '@angular/router';
-import { routes } from './app.routes';
 import {
   provideClientHydration,
   withEventReplay,
@@ -22,25 +19,21 @@ import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { API_URL } from '@core/data-access/tokens/api-url.token';
 import { environment } from '@env/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { LanguagesISOEnum } from '@core/entities/enums/languages-iso.enum';
 import { CLIENT_URL } from '@core/data-access/tokens/client-url.token';
 import { httpLoaderFactory } from '@core/data-access/factories/http-loader.factory';
+import { defaultLanguage } from '@core/entities/constants/default-language.const';
+import { routes } from '@app/app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideClientHydration(withEventReplay()),
-    provideRouter(
-      routes,
-      withPreloading(PreloadAllModules),
-      withViewTransitions(),
-      withComponentInputBinding(),
-    ),
+    provideRouter(routes, withViewTransitions(), withComponentInputBinding()),
     provideAnimations(),
     provideAnimationsAsync(),
     provideHttpClient(withInterceptors([requestTrackerInterceptor])),
     provideTranslateService({
-      defaultLanguage: LanguagesISOEnum.Russian,
+      defaultLanguage: defaultLanguage,
       loader: {
         provide: TranslateLoader,
         useFactory: httpLoaderFactory,

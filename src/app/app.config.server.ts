@@ -1,11 +1,11 @@
 import { mergeApplicationConfig, ApplicationConfig } from '@angular/core';
-import { appConfig } from './app.config';
 import {
   provideHttpClient,
   withFetch,
   withInterceptors,
 } from '@angular/common/http';
 import { provideServerRendering } from '@angular/platform-server';
+import { appConfig } from '@app/app.config';
 
 const serverConfig: ApplicationConfig = {
   providers: [

@@ -6,7 +6,7 @@ import { combineLatest, filter, map, Observable } from 'rxjs';
 import {
   IAuthor,
   IAuthorResponse,
-} from '@app/domain/entities/interfaces/author.interface';
+} from '@domain/entities/interfaces/author.interface';
 
 @Injectable({
   providedIn: 'root',

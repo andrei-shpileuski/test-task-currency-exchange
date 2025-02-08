@@ -1,6 +1,6 @@
-@use "../../../../../../styles/mixins" as *;
-@use "../../../../../../styles/sizes" as *;
-@use "../../../../../../styles/breakpoints" as *;
+@use "src/styles/mixins.scss" as *;
+@use "src/styles/sizes.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
 
 :host {
   .solution-page {

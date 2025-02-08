@@ -2,7 +2,6 @@ import { LanguagesISOEnum } from '@core/entities/enums/languages-iso.enum';
 
 export interface IMetadataResponse {
   type: 'website';
-  locale: Record<LanguagesISOEnum, string>;
   title: Record<LanguagesISOEnum, string>;
   description: Record<LanguagesISOEnum, string>;
   og: IOpenGraphMetadataResponse;
@@ -19,10 +18,7 @@ export interface IOpenGraphMetadataResponse {
 }
 
 export interface IMetadata
-  extends Omit<
-    IMetadataResponse,
-    'locale' | 'title' | 'description' | 'keywords' | 'og'
-  > {
+  extends Omit<IMetadataResponse, 'title' | 'description' | 'keywords' | 'og'> {
   locale: string;
   title: string;
   description: string;

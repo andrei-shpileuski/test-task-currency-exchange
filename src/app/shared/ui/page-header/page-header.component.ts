@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
-import { BackButtonComponent } from '@app/shared/ui/back-button/back-button.component';
+import { BackButtonComponent } from '@shared/ui/back-button/back-button.component';
 
 @Component({
   selector: 'app-page-header',

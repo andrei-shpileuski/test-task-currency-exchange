@@ -5,11 +5,11 @@ import {
   Signal,
 } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ITask } from '@app/domain/entities/interfaces/task.interface';
+import { ITask } from '@domain/entities/interfaces/task.interface';
 import { MatAnchor } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
-import { PageHeaderComponent } from '@app/shared/ui/page-header/page-header.component';
-import { taskStore } from '@app/domain/data-access/state/task.store';
+import { PageHeaderComponent } from '@shared/ui/page-header/page-header.component';
+import { taskStore } from '@domain/data-access/state/task.store';
 
 @Component({
   selector: 'app-task-page',

@@ -17,17 +17,11 @@
     "module": "ES2022",
     "baseUrl": "./",
     "paths": {
+      "@app/*": ["src/app/*"],
       "@env/*": ["src/environments/*"],
       "@core/*": ["src/app/core/*"],
-      "@app/*": ["src/app/*"],
-      "@intro/*": ["src/app/features/intro/*"],
-      "@test-task/*": ["src/app/features/test-task/*"],
-      "@test-task-description/*": [
-        "src/app/features/test-task/test-task-description/*"
-      ],
-      "@test-task-solution/*": [
-        "src/app/features/test-task/test-task-solution/*"
-      ]
+      "@domain/*": ["src/app/domain/*"],
+      "@shared/*": ["src/app/shared/*"],
     }
   },
   "angularCompilerOptions": {

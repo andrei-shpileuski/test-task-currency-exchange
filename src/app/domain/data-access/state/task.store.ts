@@ -1,8 +1,8 @@
 import { patchState, signalStore, withMethods, withState } from '@ngrx/signals';
 import { inject } from '@angular/core';
 import { take } from 'rxjs';
-import { ITask } from '@app/domain/entities/interfaces/task.interface';
-import { TaskApiService } from '@app/domain/data-access/api/task-api.service';
+import { ITask } from '@domain/entities/interfaces/task.interface';
+import { TaskApiService } from '@domain/data-access/api/task-api.service';
 
 export const taskStore = signalStore(
   { providedIn: 'root' },

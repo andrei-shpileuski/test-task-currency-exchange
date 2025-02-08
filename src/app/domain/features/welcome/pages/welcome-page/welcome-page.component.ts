@@ -5,12 +5,12 @@ import {
   Signal,
 } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { IVacancy } from '@app/domain/entities/interfaces/vacancy.interface';
-import { ITask } from '@app/domain/entities/interfaces/task.interface';
+import { IVacancy } from '@domain/entities/interfaces/vacancy.interface';
+import { ITask } from '@domain/entities/interfaces/task.interface';
 import { MatAnchor } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
-import { taskStore } from '@app/domain/data-access/state/task.store';
-import { vacancyStore } from '@app/domain/data-access/state/vacancy.store';
+import { taskStore } from '@domain/data-access/state/task.store';
+import { vacancyStore } from '@domain/data-access/state/vacancy.store';
 
 @Component({
   selector: 'app-welcome-page',

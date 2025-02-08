@@ -23,11 +23,7 @@ export const requestTrackerInterceptor: HttpInterceptorFn = (
       next: (event) => {
         if (event instanceof HttpResponse) {
           requestWasHandled = true;
-          if (event.status >= 200 && event.status < 300) {
-            requestCounter.decrease();
-          } else {
-            requestCounter.decrease();
-          }
+          requestCounter.decrease();
         }
       },
       error: () => {

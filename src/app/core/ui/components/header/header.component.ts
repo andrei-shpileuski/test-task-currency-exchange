@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { IAuthor } from '@app/domain/entities/interfaces/author.interface';
-import {MatTooltip} from '@angular/material/tooltip';
+import { IAuthor } from '@domain/entities/interfaces/author.interface';
+import { MatTooltip } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-header',

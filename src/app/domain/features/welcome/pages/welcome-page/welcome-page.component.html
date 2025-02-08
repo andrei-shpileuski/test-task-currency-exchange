@@ -1,9 +1,7 @@
 <div class="welcome-page">
   <div class="welcome-page__test-task">
     @if (task()?.title) {
-      <h1 class="welcome-page__test-task_name">
-        «{{ task()?.title }}»
-      </h1>
+      <h1 class="welcome-page__test-task_name">«{{ task()?.title }}»</h1>
     }
     @if (vacancy()?.company?.name) {
       <h2 class="welcome-page__test-task_title">

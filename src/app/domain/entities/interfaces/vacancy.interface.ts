@@ -1,7 +1,7 @@
 import {
   ICompany,
   ICompanyResponse,
-} from '@app/domain/entities/interfaces/company.interface';
+} from '@domain/entities/interfaces/company.interface';
 
 export interface IVacancyResponse {
   title: Record<string, string>;

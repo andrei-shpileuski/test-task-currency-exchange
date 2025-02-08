@@ -5,9 +5,9 @@ import {
   Signal,
 } from '@angular/core';
 import { TranslatePipe } from '@ngx-translate/core';
-import { ITask } from '@app/domain/entities/interfaces/task.interface';
-import { PageHeaderComponent } from '@app/shared/ui/page-header/page-header.component';
-import { taskStore } from '@app/domain/data-access/state/task.store';
+import { PageHeaderComponent } from '@shared/ui/page-header/page-header.component';
+import { ITask } from '@domain/entities/interfaces/task.interface';
+import { taskStore } from '@domain/data-access/state/task.store';
 
 @Component({
   selector: 'app-solution-page',

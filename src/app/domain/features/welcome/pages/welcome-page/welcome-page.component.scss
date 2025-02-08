@@ -1,7 +1,7 @@
-@use "../../../../../../styles/mixins" as *;
-@use "../../../../../../styles/colors" as *;
-@use "../../../../../../styles/sizes" as *;
-@use "../../../../../../styles/breakpoints" as *;
+@use "src/styles/mixins.scss" as *;
+@use "src/styles/colors.scss" as *;
+@use "src/styles/sizes.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
 
 :host {
   .welcome-page {
@@ -19,7 +19,7 @@
       }
       &_repository {
         text-decoration: underline;
-        color: $color-red-grey;
+        color: $color-white-50;
       }
     }
 

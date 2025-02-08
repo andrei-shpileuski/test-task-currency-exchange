@@ -6,7 +6,7 @@ import { combineLatest, filter, map, Observable } from 'rxjs';
 import {
   ITask,
   ITaskResponse,
-} from '@app/domain/entities/interfaces/task.interface';
+} from '@domain/entities/interfaces/task.interface';
 
 @Injectable({
   providedIn: 'root',

@@ -4,13 +4,13 @@ import { combineLatest, filter, map, Observable } from 'rxjs';
 import {
   IMetadata,
   IMetadataResponse,
-} from '@app/domain/entities/interfaces/metadata.interface';
+} from '@domain/entities/interfaces/metadata.interface';
 import { CLIENT_URL } from '@core/data-access/tokens/client-url.token';
 import { currentLanguageStore } from '@core/data-access/state/current-language.store';
 import { toObservable } from '@angular/core/rxjs-interop';
-import { authorStore } from '@app/domain/data-access/state/author.store';
-import { vacancyStore } from '@app/domain/data-access/state/vacancy.store';
-import { taskStore } from '@app/domain/data-access/state/task.store';
+import { authorStore } from '@domain/data-access/state/author.store';
+import { vacancyStore } from '@domain/data-access/state/vacancy.store';
+import { taskStore } from '@domain/data-access/state/task.store';
 
 interface IMetadataReplaceData {
   authorName: string;
@@ -48,7 +48,7 @@ export class MetadataApiService {
 
         const localizedMetadata = {
           type: metadata.type,
-          locale: metadata.locale[lang],
+          locale: lang,
           title: this._replaceAll(metadata.title[lang], replaceData),
           description: this._replaceAll(
             metadata.description[lang],

@@ -1,14 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { DOCUMENT } from '@angular/common';
-import { IMetadata } from '@app/domain/entities/interfaces/metadata.interface';
-
-interface IMetadataReplaceData {
-  authorName: string;
-  testTaskName: string;
-  vacancyTitle: string;
-  companyName: string;
-}
+import { IMetadata } from '@domain/entities/interfaces/metadata.interface';
 
 @Injectable({
   providedIn: 'root',
