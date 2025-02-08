@@ -10,6 +10,7 @@
       @for (link of author()!.links; track $index) {
         <a
           class="header__links__link"
+          [matTooltip]="link.name"
           [target]="link.target"
           [href]="link.type === 'link' ? link.href : 'mailto:' + link.href"
         >

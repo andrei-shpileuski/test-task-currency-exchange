@@ -1,5 +1,13 @@
 @use "@angular/material" as mat;
 @use "src/styles/font-faces.scss" as *;
+@use "src/styles/colors.scss" as *;
+
+@include mat.tooltip-overrides(
+  (
+    container-color: $color-black-25,
+    supporting-text-color: $color-white-default,
+  )
+);
 
 html {
   @include mat.theme(
@@ -32,10 +40,10 @@ body {
 html {
   background: rgb(75, 0, 0);
   background: linear-gradient(
-      145deg,
-      rgba(75, 0, 0, 1) 0%,
-      rgba(52, 13, 13, 1) 10%,
-      rgba(40, 36, 36, 1) 30%
+    145deg,
+    rgba(75, 0, 0, 1) 0%,
+    rgba(52, 13, 13, 1) 10%,
+    rgba(40, 36, 36, 1) 30%
   );
   background-color: rgba(40, 36, 36, 1);
   background-attachment: fixed;
