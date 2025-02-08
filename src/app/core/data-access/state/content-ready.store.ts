@@ -11,19 +11,19 @@ import { filter, from, interval, map, Observable, switchMap, take } from 'rxjs';
 import { toObservable } from '@angular/core/rxjs-interop';
 import { platformStore } from '@core/data-access/state/platform.store';
 
-interface State {
+interface IState {
   fontsLoaded: boolean;
   translationsLoaded: boolean;
 }
 
-const initialState: State = {
+const initialState: IState = {
   fontsLoaded: false,
   translationsLoaded: false,
 };
 
 export const contentReadyStore = signalStore(
   { providedIn: 'root' },
-  withState<State>(initialState),
+  withState<IState>(initialState),
   withComputed((state) => ({
     ready: computed(() => state.translationsLoaded() && state.fontsLoaded()),
   })),
@@ -33,12 +33,12 @@ export const contentReadyStore = signalStore(
       fontsService = inject(FontsService),
       translateService = inject(TranslateService),
     ) => ({
-      setFontsLoaded(): void {
+      defineFontsLoaded(): void {
         fontsService.fontsLoaded$.subscribe(() => {
           patchState(store, { fontsLoaded: true });
         });
       },
-      setTranslationsLoaded(): void {
+      defineTranslationsLoaded(): void {
         interval(10)
           .pipe(
             map(() => translateService.instant('TRANSLATION_READY')),

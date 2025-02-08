@@ -1,0 +1,33 @@
+@use "../../../../../../styles/mixins" as *;
+@use "../../../../../../styles/sizes" as *;
+@use "../../../../../../styles/breakpoints" as *;
+
+:host {
+  .task-page {
+    @include flex(column, flex-start, flex-start, null, 40px);
+    max-width: $max-content-width;
+    &__content {
+      @include flex(column, null, null, null, 40px);
+      &__text {
+        font-size: 18px;
+        max-width: 100%;
+        word-break: break-word;
+      }
+      &_button {
+        width: fit-content;
+      }
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .task-page {
+      max-width: $max-content-width-mobile;
+      &__content {
+        gap: 12px;
+        &__text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

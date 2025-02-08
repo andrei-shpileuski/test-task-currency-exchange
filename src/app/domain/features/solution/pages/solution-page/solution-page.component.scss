@@ -1,0 +1,16 @@
+@use "../../../../../../styles/mixins" as *;
+@use "../../../../../../styles/sizes" as *;
+@use "../../../../../../styles/breakpoints" as *;
+
+:host {
+  .solution-page {
+    @include flex(column, flex-start, flex-start, null, 40px);
+    max-width: $max-content-width-mobile;
+  }
+
+  @media screen and (max-width: $mobile) {
+    .solution-page {
+      max-width: $max-content-width-mobile;
+    }
+  }
+}

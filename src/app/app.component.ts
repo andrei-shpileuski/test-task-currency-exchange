@@ -9,11 +9,11 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@core/ui/components/header/header.component';
 import { CoreStateService } from '@core/data-access/state/core-state.service';
 import { MatProgressBar } from '@angular/material/progress-bar';
-import { IAuthor } from '@app/environment/entities/interfaces/author.interface';
-import { authorStore } from '@app/environment/data-access/state/author.store';
-import { metadataStore } from '@app/metadata/metadata.store';
-import { vacancyStore } from '@app/environment/data-access/state/vacancy.store';
-import { taskStore } from '@app/environment/data-access/state/task.store';
+import { IAuthor } from '@app/domain/entities/interfaces/author.interface';
+import { authorStore } from '@app/domain/data-access/state/author.store';
+import { metadataStore } from '@app/domain/data-access/state/metadata.store';
+import { vacancyStore } from '@app/domain/data-access/state/vacancy.store';
+import { taskStore } from '@app/domain/data-access/state/task.store';
 
 @Component({
   selector: 'app-root',

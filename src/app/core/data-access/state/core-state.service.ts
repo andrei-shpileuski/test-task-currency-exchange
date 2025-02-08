@@ -8,15 +8,15 @@ import { requestCountStore } from '@core/data-access/state/request-count.store';
   providedIn: 'root',
 })
 export class CoreStateService {
-  public currentLanguage = inject(currentLanguageStore);
-  public platform = inject(platformStore);
-  public contentReady = inject(contentReadyStore);
-  public requestCount = inject(requestCountStore);
+  public readonly currentLanguage = inject(currentLanguageStore);
+  public readonly platform = inject(platformStore);
+  public readonly contentReady = inject(contentReadyStore);
+  public readonly requestCount = inject(requestCountStore);
 
   public init(): void {
     this.currentLanguage.init();
     this.platform.init();
-    this.contentReady.setFontsLoaded();
-    this.contentReady.setTranslationsLoaded();
+    this.contentReady.defineFontsLoaded();
+    this.contentReady.defineTranslationsLoaded();
   }
 }

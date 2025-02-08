@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { IAuthor } from '@app/environment/entities/interfaces/author.interface';
+import { IAuthor } from '@app/domain/entities/interfaces/author.interface';
 
 @Component({
   selector: 'app-header',
