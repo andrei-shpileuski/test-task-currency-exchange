@@ -4,7 +4,7 @@
     "TITLE": "Test assignment in the company «{{ companyName }}» for the position of «{{ vacancyTitle }}»",
     "REPOSITORY_LINK": "Link to the repository",
     "BUTTONS": {
-      "DESCRIPTION": "See test task Description",
+      "DESCRIPTION": "View task Description",
       "SOLUTION": "Go to the Solution"
     }
   },
@@ -13,5 +13,13 @@
   },
   "SOLUTION": {
     "TITLE": "Test Task «{{ testTaskTitle }}» Solution"
-  }
+  },
+  "ESTIMATIONS": {
+    "TASK_ASSIGNED_AT": "Test Assignment Date",
+    "COMPLETION_TIME": "Allocated Time",
+    "DEADLINE": "Deadline",
+    "COMPLETED_AT": "Completion Date",
+    "ACTUAL_SPENT_TIME": "Actual Time Spent"
+  },
+  "DAYS": ["day", "days"]
 }

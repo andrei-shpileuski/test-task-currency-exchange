@@ -6,6 +6,7 @@ import {
 export interface IVacancyResponse {
   title: Record<string, string>;
   grade: Record<string, string>;
+  url: string;
   company: ICompanyResponse;
 }
 

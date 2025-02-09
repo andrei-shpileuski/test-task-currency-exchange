@@ -13,5 +13,13 @@
   },
   "SOLUTION": {
     "TITLE": "Решение техзадания «{{ testTaskTitle }}»"
-  }
+  },
+  "ESTIMATIONS": {
+    "TASK_ASSIGNED_AT": "Дата получения тестового",
+    "COMPLETION_TIME": "Отведённое время",
+    "DEADLINE": "Дэдлайн",
+    "COMPLETED_AT": "Дата выполнения",
+    "ACTUAL_SPENT_TIME": "Фактическое время выполнения"
+  },
+  "DAYS": ["день", "дня", "дней"]
 }

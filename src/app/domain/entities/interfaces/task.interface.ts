@@ -1,7 +1,8 @@
 export interface ITaskResponse {
-  repositoryLink: string;
   title: Record<string, string>;
   text: Record<string, string[]>;
+  taskAssignedAt: Date;
+  completionTime: number;
 }
 
 export interface ITask extends Omit<ITaskResponse, 'title' | 'text'> {

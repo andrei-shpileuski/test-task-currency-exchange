@@ -6,7 +6,7 @@
   "links": [
     {
       "name": "Boosty",
-      "href": {
+      "url": {
         "en": "https://boosty.to/andrei-shpileuski",
         "ru": "https://boosty.to/andrei-shpileuski"
       },
@@ -17,7 +17,7 @@
     },
     {
       "name": "Telegram",
-      "href": {
+      "url": {
         "en": "https://t.me/andrei_shpileuski_work",
         "ru": "https://t.me/andrei_shpileuski_work"
       },
@@ -28,7 +28,7 @@
     },
     {
       "name": "GitHub",
-      "href": {
+      "url": {
         "en": "https://github.com/andrei-shpileuski",
         "ru": "https://github.com/andrei-shpileuski"
       },
@@ -39,7 +39,7 @@
     },
     {
       "name": "LinkedIn",
-      "href": {
+      "url": {
         "en": "https://www.linkedin.com/in/andrei-shpileuski",
         "ru": "https://www.linkedin.com/in/andrei-shpileuski"
       },
@@ -50,7 +50,7 @@
     },
     {
       "name": "Email",
-      "href": {
+      "url": {
         "en": "shpilevskiy.aa@gmail.com",
         "ru": "shpilevskiy.aa@gmail.com"
       },
@@ -61,7 +61,7 @@
     },
     {
       "name": "CV",
-      "href": {
+      "url": {
         "en": "https://drive.google.com/file/d/1EqYwFpfL1Xqpl-ZqX61iyjWPJZxE97uO/view?usp=share_link",
         "ru": "https://drive.google.com/file/d/1KuTA5tKcTVv3kezF6aW2MRLXNgRB4Oef/view?usp=share_link"
       },

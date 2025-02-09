@@ -12,7 +12,7 @@
           class="header__links__link"
           [matTooltip]="link.name"
           [target]="link.target"
-          [href]="link.type === 'link' ? link.href : 'mailto:' + link.href"
+          [href]="link.type === 'link' ? link.url : 'mailto:' + link.url"
         >
           <img
             class="header__links__link_icon"

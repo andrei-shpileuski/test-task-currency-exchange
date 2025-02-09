@@ -24,9 +24,9 @@ export class TaskApiService {
         const { title, text } = task;
 
         return {
+          ...task,
           title: title[lang],
           text: text[lang],
-          repositoryLink: task.repositoryLink,
         };
       }),
     );

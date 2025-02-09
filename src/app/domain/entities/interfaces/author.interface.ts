@@ -4,7 +4,7 @@ export interface IAuthorResponse {
 }
 
 export interface IAuthorLinkResponse {
-  href: Record<string, string>;
+  url: Record<string, string>;
   icon: string;
   name: string;
   target: string;
@@ -18,6 +18,6 @@ export interface IAuthor extends Omit<IAuthorResponse, 'name' | 'links'> {
 }
 
 export interface IAuthorLink
-  extends Omit<IAuthorLinkResponse, 'href' | 'isVisible'> {
-  href: string;
+  extends Omit<IAuthorLinkResponse, 'url' | 'isVisible'> {
+  url: string;
 }

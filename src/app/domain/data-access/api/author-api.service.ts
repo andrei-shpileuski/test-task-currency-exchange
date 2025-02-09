@@ -27,7 +27,7 @@ export class AuthorApiService {
           .filter((link) => link.isVisible)
           .map((link) => ({
             ...link,
-            href: link.href[lang],
+            url: link.url[lang],
           }));
 
         return { name: name[lang], links: updatedLinks };

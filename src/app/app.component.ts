@@ -14,6 +14,7 @@ import { authorStore } from '@domain/data-access/state/author.store';
 import { metadataStore } from '@domain/data-access/state/metadata.store';
 import { vacancyStore } from '@domain/data-access/state/vacancy.store';
 import { taskStore } from '@domain/data-access/state/task.store';
+import { solutionStore } from '@domain/data-access/state/solution.store';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit {
   private readonly _authorStore = inject(authorStore);
   private readonly _vacancyStore = inject(vacancyStore);
   private readonly _taskStore = inject(taskStore);
+  private readonly _solutionStore = inject(solutionStore);
 
   public loading: Signal<boolean> = this._coreStateService.requestCount.loading;
   public contentReady: Signal<boolean> =
@@ -45,5 +47,6 @@ export class AppComponent implements OnInit {
     this._authorStore.defineData();
     this._vacancyStore.defineData();
     this._taskStore.defineData();
+    this._solutionStore.defineData();
   }
 }

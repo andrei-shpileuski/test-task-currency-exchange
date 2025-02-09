@@ -15,13 +15,55 @@
         }}
       </h2>
     }
-    @if (task()?.repositoryLink) {
-      <a
-        class="welcome-page__test-task_repository"
-        [href]="task()!.repositoryLink"
-        [target]="'_blank'"
-        >{{ "INTRO.REPOSITORY_LINK" | translate }}</a
-      >
+
+<!--    todo-->
+    @if (
+      task()?.taskAssignedAt &&
+      task()?.completionTime &&
+      solution()?.completedAt &&
+      false
+    ) {
+      <div class="welcome-page__test-task__additional">
+        <p class="welcome-page__test-task__additional_row">
+          <span
+            ><span>{{ "ESTIMATIONS.TASK_ASSIGNED_AT" | translate }}</span
+            >: </span
+          ><span>{{ task()!.taskAssignedAt | date }}</span>
+        </p>
+        <p class="welcome-page__test-task__additional_row">
+          <span
+            ><span>{{ "ESTIMATIONS.COMPLETION_TIME" | translate }}</span
+            >: </span
+          ><span>{{ task()!.completionTime | translatePlural: "DAYS" }}</span>
+        </p>
+        <p class="welcome-page__test-task__additional_row">
+          <span
+            ><span>{{ "ESTIMATIONS.DEADLINE" | translate }}</span
+            >: </span
+          ><span>{{
+            task()!.taskAssignedAt
+              | addDurationDate: task()!.completionTime
+              | date
+          }}</span>
+        </p>
+        <hr />
+        <p class="welcome-page__test-task__additional_row">
+          <span
+            ><span>{{ "ESTIMATIONS.COMPLETED_AT" | translate }}</span
+            >: </span
+          ><span>{{ solution()!.completedAt | date }}</span>
+        </p>
+        <p class="welcome-page__test-task__additional_row">
+          <span
+            ><span>{{ "ESTIMATIONS.ACTUAL_SPENT_TIME" | translate }}</span
+            >: </span
+          ><span>{{
+            solution()!.completedAt
+              | diffDate: task()!.taskAssignedAt
+              | translatePlural: "DAYS"
+          }}</span>
+        </p>
+      </div>
     }
   </div>
 
@@ -32,5 +74,10 @@
     <a mat-flat-button [routerLink]="'/solution'">{{
       "INTRO.BUTTONS.SOLUTION" | translate
     }}</a>
+    @if (solution()?.repositoryUrl) {
+      <a mat-button [href]="solution()!.repositoryUrl" [target]="'_blank'">{{
+        "INTRO.REPOSITORY_LINK" | translate
+      }}</a>
+    }
   </div>
 </div>

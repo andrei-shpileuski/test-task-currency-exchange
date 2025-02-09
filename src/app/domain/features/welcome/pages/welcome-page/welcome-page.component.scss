@@ -17,9 +17,13 @@
         width: calc($content-width * 0.7);
         max-width: $max-content-width;
       }
-      &_repository {
-        text-decoration: underline;
-        color: $color-white-50;
+      &__additional {
+        background-color: $color-black-25;
+        padding: 16px;
+        border-radius: 12px;
+        &_row {
+          font-size: 14px;
+        }
       }
     }
 

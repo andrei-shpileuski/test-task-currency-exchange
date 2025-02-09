@@ -21,7 +21,6 @@ import { provideTranslateService, TranslateLoader } from '@ngx-translate/core';
 import { API_URL } from '@core/data-access/tokens/api-url.token';
 import { environment } from '@env/environment';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { CLIENT_URL } from '@core/data-access/tokens/client-url.token';
 import { httpLoaderFactory } from '@core/data-access/factories/http-loader.factory';
 import { routes } from '@app/app.routes';
 import { defaultLanguage } from '@core/entities/constants/default-language.const';
@@ -48,6 +47,5 @@ export const appConfig: ApplicationConfig = {
       },
     }),
     { provide: API_URL, useValue: environment.apiUrl },
-    { provide: CLIENT_URL, useValue: environment.url },
   ],
 };

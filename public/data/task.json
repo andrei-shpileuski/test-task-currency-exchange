@@ -7,5 +7,6 @@
     "ru": ["Описание задачи.", "Описание задачи.", "Описание задачи."],
     "en": ["Task description.", "Task description.", "Task description."]
   },
-  "repositoryLink": "https://github.com/andrei-shpileuski/test-task-monolith"
+  "taskAssignedAt": "2025-02-04T19:02:00Z",
+  "completionTime": 7
 }

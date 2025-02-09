@@ -24,6 +24,7 @@ export class VacancyApiService {
         const { title, grade, company } = vacancy;
 
         return {
+          ...vacancy,
           title: title[lang],
           grade: grade[lang],
           company: {
