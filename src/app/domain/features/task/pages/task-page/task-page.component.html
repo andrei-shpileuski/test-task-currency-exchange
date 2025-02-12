@@ -13,11 +13,16 @@
         <br />
       }
     </div>
-    <a
-      class="task-page__content_button"
-      mat-flat-button
-      [routerLink]="'/solution'"
-      >{{ "INTRO.BUTTONS.SOLUTION" | translate }}</a
-    >
+
+    <div class="task-page__buttons">
+      <a mat-flat-button [routerLink]="'/solution'">{{
+        "INTRO.BUTTONS.SOLUTION" | translate
+      }}</a>
+      @if (solution()?.repositoryUrl) {
+        <a mat-button [href]="solution()!.repositoryUrl" [target]="'_blank'">{{
+          "INTRO.BUTTONS.REPOSITORY" | translate
+        }}</a>
+      }
+    </div>
   </div>
 </div>

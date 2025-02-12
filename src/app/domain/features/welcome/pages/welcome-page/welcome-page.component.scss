@@ -5,25 +5,18 @@
 
 :host {
   .welcome-page {
-    @include flex(column, flex-start, center, null, 100px);
+    @include flex(column, flex-start, center, null, 60px);
     min-height: $min-content-height;
     &__test-task {
       @include flex(column, flex-start, flex-start, null, $content-padding);
       &_name {
-        color: $color-whitesmoke;
+        color: white;
         font-size: 50px;
       }
       &_title {
         width: calc($content-width * 0.7);
         max-width: $max-content-width;
-      }
-      &__additional {
-        background-color: $color-black-25;
-        padding: 16px;
-        border-radius: 12px;
-        &_row {
-          font-size: 14px;
-        }
+        color: $color-white-90;
       }
     }
 
@@ -45,6 +38,11 @@
         &_title {
           max-width: $max-content-width-mobile;
           font-size: 16px;
+        }
+      }
+      &__buttons {
+        * {
+          width: 100%;
         }
       }
     }

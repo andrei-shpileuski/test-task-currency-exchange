@@ -2,10 +2,10 @@
   "TRANSLATION_READY": "true",
   "INTRO": {
     "TITLE": "Test assignment in the company «{{ companyName }}» for the position of «{{ vacancyTitle }}»",
-    "REPOSITORY_LINK": "Link to the repository",
     "BUTTONS": {
-      "DESCRIPTION": "View task Description",
-      "SOLUTION": "Go to the Solution"
+      "DESCRIPTION": "View Description",
+      "SOLUTION": "Go to Solution",
+      "REPOSITORY": "Open Repository"
     }
   },
   "TEST_TASK_DESCRIPTION": {
@@ -15,7 +15,7 @@
     "TITLE": "Test Task «{{ testTaskTitle }}» Solution"
   },
   "ESTIMATIONS": {
-    "TASK_ASSIGNED_AT": "Test Assignment Date",
+    "TASK_ASSIGNED_AT": "Assignment Date",
     "COMPLETION_TIME": "Allocated Time",
     "DEADLINE": "Deadline",
     "COMPLETED_AT": "Completion Date",

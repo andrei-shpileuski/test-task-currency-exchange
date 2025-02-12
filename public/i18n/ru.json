@@ -2,10 +2,10 @@
   "TRANSLATION_READY": "true",
   "INTRO": {
     "TITLE": "Тестовое задание для компании «{{ companyName }}» на позицию «{{ vacancyTitle }}»",
-    "REPOSITORY_LINK": "Ссылка на репозиторий",
     "BUTTONS": {
-      "DESCRIPTION": "Посмотреть описание задачи",
-      "SOLUTION": "Перейти к решению"
+      "DESCRIPTION": "Посмотреть описание",
+      "SOLUTION": "Перейти к решению",
+      "REPOSITORY": "Открыть репозиторий"
     }
   },
   "TEST_TASK_DESCRIPTION": {
@@ -15,7 +15,7 @@
     "TITLE": "Решение техзадания «{{ testTaskTitle }}»"
   },
   "ESTIMATIONS": {
-    "TASK_ASSIGNED_AT": "Дата получения тестового",
+    "TASK_ASSIGNED_AT": "Дата начала",
     "COMPLETION_TIME": "Отведённое время",
     "DEADLINE": "Дэдлайн",
     "COMPLETED_AT": "Дата выполнения",

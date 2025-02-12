@@ -1,6 +1,7 @@
 @use "src/styles/mixins.scss" as *;
 @use "src/styles/sizes.scss" as *;
 @use "src/styles/breakpoints.scss" as *;
+@use "src/styles/colors.scss" as *;
 
 :host {
   .task-page {
@@ -12,10 +13,12 @@
         font-size: 18px;
         max-width: 100%;
         word-break: break-word;
+        color: $color-white-90;
       }
-      &_button {
-        width: fit-content;
-      }
+    }
+    &__buttons {
+      @include flex(row, flex-start, flex-start, null, 12px);
+      flex-wrap: wrap;
     }
   }
 

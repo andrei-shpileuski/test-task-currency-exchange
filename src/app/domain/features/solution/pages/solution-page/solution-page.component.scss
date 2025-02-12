@@ -6,6 +6,11 @@
   .solution-page {
     @include flex(column, flex-start, flex-start, null, 40px);
     max-width: $max-content-width-mobile;
+
+    &__buttons {
+      @include flex(row, flex-start, flex-start, null, 12px);
+      flex-wrap: wrap;
+    }
   }
 
   @media screen and (max-width: $mobile) {

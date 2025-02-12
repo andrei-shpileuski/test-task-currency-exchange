@@ -1,0 +1,30 @@
+@use "src/styles/sizes.scss" as *;
+@use "src/styles/colors.scss" as *;
+@use "src/styles/mixins.scss" as *;
+@use "src/styles/breakpoints.scss" as *;
+
+:host {
+  .deadlines {
+    margin-top: $content-padding;
+    background-color: $color-black-25;
+    padding: 16px;
+    border-radius: 12px;
+    &_row {
+      @include flex(row, center, space-between, null, 80px);
+      font-size: 14px;
+    }
+    &_divider {
+      height: 1px;
+      width: 100%;
+      background-color: $color-white-10;
+      margin: calc($content-padding / 2) 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    min-width: calc(100% - 2 * $content-padding-mobile);
+    .deadlines {
+      min-width: 100%;
+    }
+  }
+}

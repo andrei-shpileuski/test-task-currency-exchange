@@ -2,4 +2,12 @@
   <app-page-header
     [title]="'SOLUTION.TITLE' | translate: { testTaskTitle: task()?.title }"
   />
+
+  <div class="solution-page__buttons">
+    @if (solution()?.repositoryUrl) {
+      <a mat-button [href]="solution()!.repositoryUrl" [target]="'_blank'">{{
+        "INTRO.BUTTONS.REPOSITORY" | translate
+      }}</a>
+    }
+  </div>
 </div>

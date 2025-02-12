@@ -10,6 +10,8 @@ import { MatAnchor } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { PageHeaderComponent } from '@shared/ui/page-header/page-header.component';
 import { taskStore } from '@domain/data-access/state/task.store';
+import { ISolutionResponse } from '@domain/entities/interfaces/solution.interface';
+import { solutionStore } from '@domain/data-access/state/solution.store';
 
 @Component({
   selector: 'app-task-page',
@@ -20,4 +22,6 @@ import { taskStore } from '@domain/data-access/state/task.store';
 })
 export class TaskPageComponent {
   public task: Signal<ITask | null> = inject(taskStore).data;
+  public solution: Signal<ISolutionResponse | null> =
+    inject(solutionStore).data;
 }

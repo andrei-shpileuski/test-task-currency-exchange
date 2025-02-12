@@ -13,22 +13,11 @@ import { taskStore } from '@domain/data-access/state/task.store';
 import { vacancyStore } from '@domain/data-access/state/vacancy.store';
 import { solutionStore } from '@domain/data-access/state/solution.store';
 import { ISolutionResponse } from '@domain/entities/interfaces/solution.interface';
-import { DatePipe } from '@angular/common';
-import { TranslatePluralPipe } from 'ngs-plural';
-import { AddDurationDatePipe } from '@shared/pipes/date/add-duration-date.pipe';
-import { DiffDatePipe } from '@shared/pipes/date/diff-date.pipe';
+import { DeadlinesComponent } from '@domain/features/welcome/pages/welcome-page/components/deadlines/deadlines.component';
 
 @Component({
   selector: 'app-welcome-page',
-  imports: [
-    TranslatePipe,
-    MatAnchor,
-    RouterLink,
-    DatePipe,
-    TranslatePluralPipe,
-    AddDurationDatePipe,
-    DiffDatePipe,
-  ],
+  imports: [TranslatePipe, MatAnchor, RouterLink, DeadlinesComponent],
   templateUrl: './welcome-page.component.html',
   styleUrl: './welcome-page.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
