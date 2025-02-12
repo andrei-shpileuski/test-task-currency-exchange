@@ -1,11 +1,12 @@
 import {
+  afterNextRender,
   ChangeDetectionStrategy,
   Component,
   inject,
   OnInit,
   Signal,
 } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '@core/ui/components/header/header.component';
 import { CoreStateService } from '@core/data-access/state/core-state.service';
 import { MatProgressBar } from '@angular/material/progress-bar';
@@ -24,6 +25,7 @@ import { solutionStore } from '@domain/data-access/state/solution.store';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
+  private router = inject(Router);
   private readonly _coreStateService = inject(CoreStateService);
   private readonly _metadataStore = inject(metadataStore);
   private readonly _authorStore = inject(authorStore);
@@ -39,6 +41,15 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.init();
+    afterNextRender(() => {
+      this.trackRoute();
+    });
+  }
+
+  private trackRoute(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) window.scrollTo(0, 0);
+    });
   }
 
   private init(): void {
