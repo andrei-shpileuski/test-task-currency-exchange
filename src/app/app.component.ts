@@ -39,11 +39,14 @@ export class AppComponent implements OnInit {
 
   public author: Signal<IAuthor | null> = inject(authorStore).data;
 
-  public ngOnInit(): void {
-    this.init();
+  public constructor() {
     afterNextRender(() => {
       this.trackRoute();
     });
+  }
+
+  public ngOnInit(): void {
+    this.init();
   }
 
   private trackRoute(): void {
