@@ -12,6 +12,7 @@
     &_row {
       @include flex(row, center, space-between, null, 80px);
       font-size: 14px;
+      flex-wrap: nowrap;
     }
     &_divider {
       height: 1px;
@@ -22,9 +23,7 @@
   }
 
   @media screen and (max-width: $mobile) {
-    min-width: calc(100% - 2 * $content-padding-mobile);
-    .deadlines {
-      min-width: 100%;
-    }
+    min-width: calc(100dvw - (2 * $content-padding-mobile));
+    max-width: calc(100dvw - (2 * $content-padding-mobile));
   }
 }

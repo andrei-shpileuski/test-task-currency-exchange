@@ -31,6 +31,13 @@
           font-size: 14px;
         }
       }
+      &__buttons {
+        min-width: calc(100dvw - (2 * $content-padding-mobile));
+        max-width: calc(100dvw - (2 * $content-padding-mobile));
+        * {
+          width: 100%;
+        }
+      }
     }
   }
 }
