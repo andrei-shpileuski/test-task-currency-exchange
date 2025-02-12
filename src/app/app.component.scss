@@ -29,7 +29,8 @@
       width: $max-content-width-mobile;
       max-width: $max-content-width-mobile;
       min-height: $min-content-height-mobile;
-      padding: calc($header-height-mobile + $content-padding-mobile * 2) 0;
+      padding: calc($header-height-mobile + $content-padding-mobile * 2) 0
+        $content-padding-mobile;
     }
   }
 }

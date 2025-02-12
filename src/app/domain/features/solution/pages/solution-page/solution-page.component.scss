@@ -1,6 +1,7 @@
 @use "src/styles/mixins.scss" as *;
 @use "src/styles/sizes.scss" as *;
 @use "src/styles/breakpoints.scss" as *;
+@use "src/styles/colors.scss" as *;
 
 :host {
   .solution-page {
@@ -16,10 +17,18 @@
   @media screen and (max-width: $mobile) {
     .solution-page {
       max-width: $max-content-width-mobile;
+      padding-bottom: 71px;
 
       &__buttons {
         min-width: calc(100dvw - (2 * $content-padding-mobile));
         max-width: calc(100dvw - (2 * $content-padding-mobile));
+        background-color: $color-black-25;
+        backdrop-filter: blur(25px);
+        padding: $content-padding-mobile;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         * {
           width: 100%;
         }

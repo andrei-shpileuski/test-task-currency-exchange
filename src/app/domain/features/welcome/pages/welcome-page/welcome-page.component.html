@@ -16,21 +16,20 @@
       </h2>
     }
 
-    <!--    todo-->
     @if (
       task()?.taskAssignedAt &&
       task()?.completionTime &&
       solution()?.completedAt
     ) {
-      <app-deadlines [task]="task()" [solution]="solution()"/>
+      <app-deadlines [task]="task()" [solution]="solution()" />
     }
   </div>
 
   <div class="welcome-page__buttons">
-    <a mat-stroked-button [routerLink]="'/task'">{{
+    <a mat-flat-button [routerLink]="'/task'">{{
       "INTRO.BUTTONS.DESCRIPTION" | translate
     }}</a>
-    <a mat-flat-button [routerLink]="'/solution'">{{
+    <a mat-stroked-button [routerLink]="'/solution'">{{
       "INTRO.BUTTONS.SOLUTION" | translate
     }}</a>
     @if (solution()?.repositoryUrl) {

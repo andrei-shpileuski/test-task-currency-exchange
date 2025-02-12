@@ -28,7 +28,8 @@
 
   @media screen and (max-width: $mobile) {
     .welcome-page {
-      min-height: $min-content-height-mobile;
+      min-height: calc(100dvh - 96px - 176px);
+    padding-bottom: 176px;
       gap: 40px;
       &__test-task {
         gap: $content-padding-mobile;
@@ -41,6 +42,13 @@
         }
       }
       &__buttons {
+        background-color: $color-black-25;
+        backdrop-filter: blur(25px);
+        padding: $content-padding-mobile;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
         * {
           width: 100%;
         }
