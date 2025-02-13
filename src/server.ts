@@ -35,6 +35,9 @@ app.use('/**', async (req, res, next) => {
 
     res.status(response.status);
     response.headers.forEach((value, key) => res.setHeader(key, value));
+    
+    res.setHeader('Content-Language', defaultLanguage);
+
     res.send(html);
   } catch (error) {
     next(error);
