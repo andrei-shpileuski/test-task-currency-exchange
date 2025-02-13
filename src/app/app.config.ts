@@ -1,4 +1,7 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import {
+  ApplicationConfig,
+  provideExperimentalZonelessChangeDetection,
+} from '@angular/core';
 import {
   PreloadAllModules,
   provideRouter,
@@ -27,7 +30,7 @@ import { defaultLanguage } from '@core/entities/constants/default-language.const
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideExperimentalZonelessChangeDetection(),
     provideClientHydration(withEventReplay()),
     provideRouter(
       routes,
