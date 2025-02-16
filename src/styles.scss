@@ -92,3 +92,8 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+::selection {
+  background: $color-white-90;
+  color: $color-black-25;
+}
