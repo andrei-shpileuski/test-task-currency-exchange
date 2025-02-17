@@ -1,16 +1,7 @@
 # Starter Project for the Test Task | Стартовый проект для тестового задания
 
-[English](#project-overview) | [Русский](#описание-проекта)
-
----
-
-## 🎉 Welcome, Guest!
-
-If you found this project useful and want to support my work, consider checking out my Boosty page!
-
-👉 Support me on [Boosty](https://boosty.to/andrei-shpileuski/donate)
-
-Your support helps me create more open-source projects and share valuable knowledge with the community. Thanks a lot! 🙌
+[English](#project-overview) | [Русский](#описание-проекта)  
+[Donate](#-welcome-guest) | [Респектнуть](#-добро-пожаловать-гость)
 
 ---
 
@@ -77,13 +68,13 @@ Place your solution in:
 
 ---
 
-## 🎉 Добро пожаловать, гость!
+## 🎉 Welcome, Guest!
 
-Если проект оказался полезным и ты хочешь поддержать мою работу, загляни на мой Boosty!
+If you found this project useful and want to support my work, consider checking out my Boosty page!
 
-👉 Поддержать на [Boosty](https://boosty.to/andrei-shpileuski/donate)
+👉 Support me on [Boosty](https://boosty.to/andrei-shpileuski/donate)
 
-Твоя поддержка помогает мне создавать больше крутых проектов и делиться знаниями с сообществом. Спасибо! 🙌
+Your support helps me create more open-source projects and share valuable knowledge with the community. Thanks a lot! 🙌
 
 ---
 
@@ -145,3 +136,13 @@ export const defaultLanguage: LanguagesISOEnum = LanguagesISOEnum.Russian;
 ## Размещение решения тестового задания
 Разместите решение в:
 `src/app/domain/features/solution`
+
+---
+
+## 🎉 Добро пожаловать, гость!
+
+Если проект оказался полезным и ты хочешь поддержать мою работу, загляни на мой Boosty!
+
+👉 Поддержать на [Boosty](https://boosty.to/andrei-shpileuski/donate)
+
+Твоя поддержка помогает мне создавать больше крутых проектов и делиться знаниями с сообществом. Спасибо! 🙌
