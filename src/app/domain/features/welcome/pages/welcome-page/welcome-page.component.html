@@ -16,11 +16,7 @@
       </h2>
     }
 
-    @if (
-      task()?.taskAssignedAt &&
-      task()?.completionTime &&
-      solution()?.completedAt
-    ) {
+    @if (isDeadlinesEnabled()) {
       <app-deadlines [task]="task()" [solution]="solution()" />
     }
   </div>

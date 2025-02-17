@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   inject,
   Signal,
 } from '@angular/core';
@@ -27,4 +28,11 @@ export class WelcomePageComponent {
   public vacancy: Signal<IVacancy | null> = inject(vacancyStore).data;
   public solution: Signal<ISolutionResponse | null> =
     inject(solutionStore).data;
+
+  isDeadlinesEnabled = computed(
+    () =>
+      this.task()?.taskAssignedAt &&
+      this.task()?.completionTime &&
+      this.solution()?.completedAt,
+  );
 }

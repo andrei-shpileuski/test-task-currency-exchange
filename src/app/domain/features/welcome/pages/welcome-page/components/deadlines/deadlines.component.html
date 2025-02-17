@@ -3,14 +3,16 @@
     <span
       ><span>{{ "ESTIMATIONS.TASK_ASSIGNED_AT" | translate }}</span
       >: </span
-    ><span>{{ task()!.taskAssignedAt | date }}</span>
+    ><span>{{ task()!.taskAssignedAt | date: "d MMMM y" }}</span>
   </p>
   <p class="deadlines_row">
     <span
       ><span>{{ "ESTIMATIONS.DEADLINE" | translate }}</span
       >: </span
     ><span>{{
-      task()!.taskAssignedAt | addDurationDate: task()!.completionTime | date
+      task()!.taskAssignedAt
+        | addDurationDate: task()!.completionTime
+        | date: "d MMMM y"
     }}</span>
   </p>
   <p class="deadlines_row">
@@ -24,7 +26,7 @@
     <span
       ><span>{{ "ESTIMATIONS.COMPLETED_AT" | translate }}</span
       >: </span
-    ><span>{{ solution()!.completedAt | date }}</span>
+    ><span>{{ solution()!.completedAt | date: "d MMMM y" }}</span>
   </p>
   <p class="deadlines_row">
     <span

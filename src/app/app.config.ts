@@ -1,5 +1,6 @@
 import {
   ApplicationConfig,
+  LOCALE_ID,
   provideExperimentalZonelessChangeDetection,
 } from '@angular/core';
 import {
@@ -27,20 +28,25 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { httpLoaderFactory } from '@core/data-access/factories/http-loader.factory';
 import { routes } from '@app/app.routes';
 import { defaultLanguage } from '@core/entities/constants/default-language.const';
+import localeRu from '@angular/common/locales/ru';
+import { registerLocaleData } from '@angular/common';
+import { LanguagesISOEnum } from '@core/entities/enums/languages-iso.enum';
+
+if (defaultLanguage === LanguagesISOEnum.Russian) registerLocaleData(localeRu);
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideExperimentalZonelessChangeDetection(),
     provideClientHydration(withEventReplay()),
+    provideAnimations(),
+    provideAnimationsAsync(),
+    provideHttpClient(withInterceptors([requestTrackerInterceptor])),
     provideRouter(
       routes,
       withPreloading(PreloadAllModules),
       withViewTransitions(),
       withComponentInputBinding(),
     ),
-    provideAnimations(),
-    provideAnimationsAsync(),
-    provideHttpClient(withInterceptors([requestTrackerInterceptor])),
     provideTranslateService({
       defaultLanguage: defaultLanguage,
       loader: {
@@ -49,6 +55,7 @@ export const appConfig: ApplicationConfig = {
         deps: [HttpClient],
       },
     }),
+    { provide: LOCALE_ID, useValue: defaultLanguage },
     { provide: API_URL, useValue: environment.apiUrl },
   ],
 };
