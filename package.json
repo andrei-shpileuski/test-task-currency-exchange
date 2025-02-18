@@ -1,6 +1,9 @@
 {
   "name": "test-task-monolith",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "This project serves as a starter template for completing technical assignments without specific design requirements when applying for a job",
+  "author": "Andrei Shpileuski",
+  "license": "MIT",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

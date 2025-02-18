@@ -9,6 +9,9 @@
 
 This project serves as a starter template for completing technical assignments without specific design requirements when applying for a job.
 
+![OG](./public/images/metadata/og-image-en.webp)
+![Lighthouse](./public/images/lighthouse/lighthouse.webp)
+
 ### Architecture
 - **Monolithic**
 
@@ -24,8 +27,8 @@ This project serves as a starter template for completing technical assignments w
 
 1. **Clone the repository:**
    ```sh
-   git clone <repository-url>
-   cd <project-folder>
+   git clone https://github.com/andrei-shpileuski/test-task-monolith.git
+   cd test-task-monolith
    ```
 2. **Install dependencies:**
    ```sh
@@ -41,10 +44,10 @@ This project serves as a starter template for completing technical assignments w
 - `provideExperimentalZonelessChangeDetection`
 
 ### SSR-Safe Services
-- `src/app/core/data-access/browser/document.service.ts`
-- `src/app/core/data-access/browser/local-storage.service.ts`
-- `src/app/core/data-access/browser/session-storage.service.ts`
-- `src/app/core/data-access/browser/window.service.ts`
+- Locale storage - `src/app/core/data-access/browser/local-storage.service.ts`
+- Session Storage - `src/app/core/data-access/browser/session-storage.service.ts`
+- Document - `src/app/core/data-access/browser/document.service.ts`
+- Window - `src/app/core/data-access/browser/window.service.ts`
 
 ## Changing the Default Language
 Update `src/app/core/entities/constants/default-language.const.ts`:
@@ -80,6 +83,11 @@ Your support helps me create more open-source projects and share valuable knowle
 
 # Описание проекта
 
+Этот проект служит стартовым шаблоном для выполнения технических заданий без конкретных требований к дизайну при подаче заявки на работу.
+
+![OG](./public/images/metadata/og-image-ru.webp)
+![Lighthouse](./public/images/lighthouse/lighthouse.webp)
+
 ### Архитектура
 - **Монолитная**
 
@@ -95,8 +103,8 @@ Your support helps me create more open-source projects and share valuable knowle
 
 1. **Клонировать репозиторий:**
    ```sh
-   git clone <repository-url>
-   cd <project-folder>
+   git clone https://github.com/andrei-shpileuski/test-task-monolith.git
+   cd test-task-monolith
    ```
 2. **Установить зависимости:**
    ```sh
@@ -112,10 +120,10 @@ Your support helps me create more open-source projects and share valuable knowle
 - `provideExperimentalZonelessChangeDetection`
 
 ### Сервисы для безопасной работы с SSR
-- `src/app/core/data-access/browser/document.service.ts`
-- `src/app/core/data-access/browser/local-storage.service.ts`
-- `src/app/core/data-access/browser/session-storage.service.ts`
-- `src/app/core/data-access/browser/window.service.ts`
+- Locale storage - `src/app/core/data-access/browser/local-storage.service.ts`
+- Session Storage - `src/app/core/data-access/browser/session-storage.service.ts`
+- Document - `src/app/core/data-access/browser/document.service.ts`
+- Window - `src/app/core/data-access/browser/window.service.ts`
 
 ## Смена языка по умолчанию
 Измените `src/app/core/entities/constants/default-language.const.ts`:
