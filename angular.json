@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "test-task-monolith": {
+    "test-task-currency-exchange": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/test-task-monolith",
+            "outputPath": "dist/test-task-currency-exchange",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
@@ -73,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "test-task-monolith:build:production"
+              "buildTarget": "test-task-currency-exchange:build:production"
             },
             "development": {
-              "buildTarget": "test-task-monolith:build:development"
+              "buildTarget": "test-task-currency-exchange:build:development"
             }
           },
           "defaultConfiguration": "development"

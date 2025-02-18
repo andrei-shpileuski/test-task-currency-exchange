@@ -1,5 +1,5 @@
 {
-  "name": "test-task-monolith",
+  "name": "test-task-currency-exchange",
   "version": "0.0.1",
   "description": "This project serves as a starter template for completing technical assignments without specific design requirements when applying for a job",
   "author": "Andrei Shpileuski",
@@ -10,7 +10,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:test-task-monolith": "node dist/test-task-monolith/server/server.mjs"
+    "serve:ssr:test-task-currency-exchange": "node dist/test-task-monolith/server/server.mjs"
   },
   "private": true,
   "dependencies": {
